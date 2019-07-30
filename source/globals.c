@@ -29,6 +29,7 @@
 #include <StageEditor.h>
 #include <AnimationInspector.h>
 #include <ToolState.h>
+#include <SoundTest.h>
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -53,8 +54,15 @@ const UserAnimatedEntity _userAnimatedEntities[] =
 	{NULL, ""},
 };
 
+extern Sound ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND;
+extern Sound SUPER_MARIO_BROS_3_TRACK_1_SOUND;
+extern Sound STRANGER_THINGS_THEME_SOUND;
+
 SoundROM* const _userSounds[] =
 {
+	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND,
+	&SUPER_MARIO_BROS_3_TRACK_1_SOUND,
+	&STRANGER_THINGS_THEME_SOUND,
 	NULL
 };
 
@@ -62,3 +70,4 @@ const ToolState _userToolStates[] =
 {
 	NULL
 };
+

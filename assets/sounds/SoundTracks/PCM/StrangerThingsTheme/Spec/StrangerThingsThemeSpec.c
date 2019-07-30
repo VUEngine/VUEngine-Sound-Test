@@ -1,0 +1,425 @@
+
+/* VUEngine - Virtual Utopia Engine <http://vuengine.planetvb.com/>
+ * A universal game engine for the Nintendo Virtual Boy
+ *
+ * Copyright (C) 2007, 2018 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+ * associated documentation files (the "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial
+ * portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+ * LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+ * NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+
+//---------------------------------------------------------------------------------------------------------
+//												INCLUDES
+//---------------------------------------------------------------------------------------------------------
+
+#include <SoundManager.h>
+
+
+//---------------------------------------------------------------------------------------------------------
+//												DEFINITIONS
+//---------------------------------------------------------------------------------------------------------
+
+#define STRANGER_THINGS_THEME_SOUND_TRACK STRANGER_THINGS_THEME_SOUND_TRACK
+
+extern const u8 STRANGER_THINGS_THEME_SOUND_TRACK[];
+
+#define STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH		633334
+
+#define WAVE_1_AMPLITUDE			63
+#define WAVE_2_AMPLITUDE			63
+#define WAVE_3_AMPLITUDE			63
+#define WAVE_4_AMPLITUDE			63
+#define WAVE_5_AMPLITUDE			63
+#define WAVE_6_AMPLITUDE			63
+
+const s8 strangerThingsThemeWave1[32] =
+{
+	WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE,
+	WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE,
+	WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE,
+	WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE, WAVE_1_AMPLITUDE,
+};
+
+const s8 strangerThingsThemeWave2[32] =
+{
+	WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE,
+	WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE,
+	WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE,
+	WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE, WAVE_2_AMPLITUDE,
+};
+
+const s8 strangerThingsThemeWave3[32] =
+{
+	WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE,
+	WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE,
+	WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE,
+	WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE, WAVE_3_AMPLITUDE,
+};
+
+
+const s8 strangerThingsThemeWave4[32] =
+{
+	WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE,
+	WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE,
+	WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE,
+	WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE, WAVE_4_AMPLITUDE,
+};
+
+const s8 strangerThingsThemeWave5[32] =
+{
+	WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE,
+	WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE,
+	WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE,
+	WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE, WAVE_5_AMPLITUDE,
+};
+
+const s8 strangerThingsThemeWave6[32] =
+{
+	WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE,
+	WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE,
+	WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE,
+	WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE, WAVE_6_AMPLITUDE,
+};
+
+SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_1_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kPCM,
+
+	/// SxINT
+	0x00,
+
+	/// Volume SxLRV
+	0x00,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0 
+	0xF0,
+
+	/// SxEV1
+	0x00,
+	
+	/// SxFQH
+	0xFF,
+
+	/// SxFQL
+	0xFF,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	strangerThingsThemeWave1,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_2_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kPCM,
+
+	/// SxINT
+	0x00,
+
+	/// Volume SxLRV
+	0x00,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0 
+	0xF0,
+
+	/// SxEV1
+	0x00,
+	
+	/// SxFQH
+	0xFF,
+
+	/// SxFQL
+	0xFF,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	strangerThingsThemeWave2,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_3_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kPCM,
+
+	/// SxINT
+	0x00,
+
+	/// Volume SxLRV
+	0x00,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0 
+	0xF0,
+
+	/// SxEV1
+	0x00,
+	
+	/// SxFQH
+	0xFF,
+
+	/// SxFQL
+	0xFF,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	strangerThingsThemeWave3,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_4_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kPCM,
+
+	/// SxINT
+	0x00,
+
+	/// Volume SxLRV
+	0x00,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0 
+	0xF0,
+
+	/// SxEV1
+	0x00,
+	
+	/// SxFQH
+	0xFF,
+
+	/// SxFQL
+	0xFF,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	strangerThingsThemeWave4,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_5_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kPCM,
+
+	/// SxINT
+	0x00,
+
+	/// Volume SxLRV
+	0x00,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0 
+	0xF0,
+
+	/// SxEV1
+	0x00,
+	
+	/// SxFQH
+	0xFF,
+
+	/// SxFQL
+	0xFF,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	strangerThingsThemeWave5,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_6_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kPCM,
+
+	/// SxINT
+	0x00,
+
+	/// Volume SxLRV
+	0x00,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0 
+	0x70,
+
+	/// SxEV1
+	0x00,
+	
+	/// SxFQH
+	0xFF,
+
+	/// SxFQL
+	0xFF,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	strangerThingsThemeWave6,
+
+	/// Is modulation
+	false
+};
+
+
+SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_1 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*) &STRANGER_THINGS_THEME_SOUND_CHANNEL_1_1_CONFIGURATION,
+
+	/// Length (PCM)
+	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
+
+	/// Sound track
+	{ 
+		STRANGER_THINGS_THEME_SOUND_TRACK
+	}
+};
+
+SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_2 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*) &STRANGER_THINGS_THEME_SOUND_CHANNEL_1_2_CONFIGURATION,
+
+	/// Length (PCM)
+	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
+
+	/// Sound track
+	{ 
+		STRANGER_THINGS_THEME_SOUND_TRACK
+	}
+};
+
+SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_3 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*) &STRANGER_THINGS_THEME_SOUND_CHANNEL_1_3_CONFIGURATION,
+
+	/// Length (PCM)
+	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
+
+	/// Sound track
+	{ 
+		STRANGER_THINGS_THEME_SOUND_TRACK
+	}
+};
+
+SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_4 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*) &STRANGER_THINGS_THEME_SOUND_CHANNEL_1_4_CONFIGURATION,
+
+	/// Length (PCM)
+	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
+
+	/// Sound track
+	{ 
+		STRANGER_THINGS_THEME_SOUND_TRACK
+	}
+};
+
+SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_5 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*) &STRANGER_THINGS_THEME_SOUND_CHANNEL_1_5_CONFIGURATION,
+
+	/// Length (PCM)
+	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
+
+	/// Sound track
+	{ 
+		STRANGER_THINGS_THEME_SOUND_TRACK
+	}
+};
+
+SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_6 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*) &STRANGER_THINGS_THEME_SOUND_CHANNEL_1_6_CONFIGURATION,
+
+	/// Length (PCM)
+	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
+
+	/// Sound track
+	{ 
+		STRANGER_THINGS_THEME_SOUND_TRACK
+	}
+};
+
+SoundChannelROM* STRANGER_THINGS_THEME_SOUND_CHANNELS[] =
+{
+	&STRANGER_THINGS_THEME_SOUND_CHANNEL_1_1,
+	&STRANGER_THINGS_THEME_SOUND_CHANNEL_1_2,
+	&STRANGER_THINGS_THEME_SOUND_CHANNEL_1_3,
+//	&STRANGER_THINGS_THEME_SOUND_CHANNEL_1_4,
+//	&STRANGER_THINGS_THEME_SOUND_CHANNEL_1_5,
+//	&STRANGER_THINGS_THEME_SOUND_CHANNEL_1_6,
+	NULL
+};
+
+SoundROM STRANGER_THINGS_THEME_SOUND =
+{
+	/// Name
+	"Stranger Thing's theme",
+
+	/// Play in loop
+	true,
+
+	/// Syncronize channels
+	true,
+
+	/// Target timer resolution in us
+	0,
+	
+	/// Tracks
+	(SoundChannel**)STRANGER_THINGS_THEME_SOUND_CHANNELS
+};
