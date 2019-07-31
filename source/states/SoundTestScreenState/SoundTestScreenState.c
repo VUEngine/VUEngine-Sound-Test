@@ -1,7 +1,7 @@
 /* VUEngine - Virtual Utopia Engine <http://vuengine.planetvb.com/>
  * A universal game engine for the Nintendo Virtual Boy
  *
- * Copyright (C) 2007, 2018 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
+ * Copyright (C) 2007, 2019 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
  * associated documentation files (the "Software"), to deal in the Software without restriction, including
@@ -30,8 +30,6 @@
 #include <SoundTestState.h>
 #include <Camera.h>
 #include <Printing.h>
-#include <I18n.h>
-#include <Languages.h>
 #include <SoundTestScreenState.h>
 
 
@@ -127,23 +125,13 @@ void SoundTestScreenState::resume(void* owner)
 
 void SoundTestScreenState::print()
 {
-	char* strHelloWorld = "Hold LT + RT";
-	FontSize textSize = Printing::getTextSize(Printing::getInstance(), strHelloWorld, "VirtualBoyExt");
+	char* strHelloWorld = "Hold LT + RT and press R DOWN";
+	FontSize textSize = Printing::getTextSize(Printing::getInstance(), strHelloWorld, NULL);
 	Printing::text(
 		Printing::getInstance(),
 		strHelloWorld,
 		(__SCREEN_WIDTH >> 4) - (textSize.x >> 1),
 		10,
-		"VirtualBoyExt"
-	);
-
-	strHelloWorld = "and press R DOWN";
-	textSize = Printing::getTextSize(Printing::getInstance(), strHelloWorld, "VirtualBoyExt");
-	Printing::text(
-		Printing::getInstance(),
-		strHelloWorld,
-		(__SCREEN_WIDTH >> 4) - (textSize.x >> 1),
-		14,
-		"VirtualBoyExt"
+		NULL
 	);
 }

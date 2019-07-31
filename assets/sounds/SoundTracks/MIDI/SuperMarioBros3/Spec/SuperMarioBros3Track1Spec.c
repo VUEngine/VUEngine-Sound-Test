@@ -2,7 +2,7 @@
 /* VUEngine - Virtual Utopia Engine <http://vuengine.planetvb.com/>
  * A universal game engine for the Nintendo Virtual Boy
  *
- * Copyright (C) 2007, 2018 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
+ * Copyright (C) 2007, 2019 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
  * associated documentation files (the "Software"), to deal in the Software without restriction, including
@@ -81,12 +81,12 @@ SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_1_CONFIGUR
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_1_SxEV0,
 
 	/// SxEV1
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_1_SxEV1,
-	
+
 	/// SxFQH
 	0x00,
 
@@ -117,12 +117,12 @@ SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_2_CONFIGUR
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_2_SxEV0,
 
 	/// SxEV1
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_2_SxEV1,
-	
+
 	/// SxFQH
 	0x00,
 
@@ -153,12 +153,12 @@ SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_3_CONFIGUR
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_3_SxEV0,
 
 	/// SxEV1
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_3_SxEV1,
-	
+
 	/// SxFQH
 	0x00,
 
@@ -189,12 +189,12 @@ SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_4_CONFIGUR
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_4_SxEV0,
 
 	/// SxEV1
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_4_SxEV1,
-	
+
 	/// SxFQH
 	0x00,
 
@@ -220,7 +220,7 @@ SoundChannelROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_1 =
 	0,
 
 	/// Sound track
-	{ 
+	{
 		SuperMarioBros3Track1Track1
 	}
 };
@@ -234,7 +234,7 @@ SoundChannelROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_2 =
 	0,
 
 	/// Sound track
-	{ 
+	{
 		SuperMarioBros3Track1Track2
 	}
 };
@@ -248,7 +248,7 @@ SoundChannelROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_3 =
 	0,
 
 	/// Sound track
-	{ 
+	{
 		SuperMarioBros3Track1Track3
 	}
 };
@@ -262,7 +262,7 @@ SoundChannelROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_4 =
 	0,
 
 	/// Sound track
-	{ 
+	{
 		SuperMarioBros3Track1Track4
 	}
 };
@@ -289,7 +289,7 @@ SoundROM SUPER_MARIO_BROS_3_TRACK_1_SOUND =
 
 	/// Target timer resolution in us
 	4180,
-	
+
 	/// Tracks
 	(SoundChannel**)SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNELS
 };

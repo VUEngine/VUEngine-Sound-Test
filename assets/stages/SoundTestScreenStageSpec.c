@@ -1,7 +1,7 @@
 /* VUEngine - Virtual Utopia Engine <http://vuengine.planetvb.com/>
  * A universal game engine for the Nintendo Virtual Boy
  *
- * Copyright (C) 2007, 2018 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
+ * Copyright (C) 2007, 2019 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
  * associated documentation files (the "Software"), to deal in the Software without restriction, including
@@ -34,7 +34,6 @@
 
 extern EntitySpec LOW_POWER_INDICATOR_LB;
 extern FontSpec VUENGINE_FONT;
-extern FontSpec VIRTUAL_BOY_EXTENDED_FONT;
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -61,7 +60,6 @@ PositionedEntityROMSpec SOUND_TEST_SCREEN_STAGE_ST_UI_ENTITIES[] =
 FontROMSpec* const SOUND_TEST_SCREEN_STAGE_ST_FONTS[] =
 {
 	&VUENGINE_FONT,
-	&VIRTUAL_BOY_EXTENDED_FONT,
 
 	NULL
 };
@@ -87,7 +85,7 @@ StageROMSpec SOUND_TEST_SCREEN_STAGE_ST =
 	{
 		__DEFAULT_PCM_HZ,
 	},
-	
+
 	// level
 	{
 		// size

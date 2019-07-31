@@ -2,7 +2,7 @@
 /* VUEngine - Virtual Utopia Engine <http://vuengine.planetvb.com/>
  * A universal game engine for the Nintendo Virtual Boy
  *
- * Copyright (C) 2007, 2018 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
+ * Copyright (C) 2007, 2019 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
  * associated documentation files (the "Software"), to deal in the Software without restriction, including
@@ -75,12 +75,12 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_C
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_TRACK_1_SxEV0,
 
 	/// SxEV1
 	ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_TRACK_1_SxEV1,
-	
+
 	/// SxFQH
 	0x00,
 
@@ -111,12 +111,12 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_C
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_TRACK_2_SxEV0,
 
 	/// SxEV1
 	ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_TRACK_2_SxEV1,
-	
+
 	/// SxFQH
 	0x00,
 
@@ -147,12 +147,12 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_C
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_TRACK_3_SxEV0,
 
 	/// SxEV1
 	ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_TRACK_3_SxEV1,
-	
+
 	/// SxFQH
 	0x00,
 
@@ -178,7 +178,7 @@ SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1 =
 	0,
 
 	/// Sound track
-	{ 
+	{
 		OracleOfSeasonsOverworldThemeTrack1
 	}
 };
@@ -192,7 +192,7 @@ SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2 =
 	0,
 
 	/// Sound track
-	{ 
+	{
 		OracleOfSeasonsOverworldThemeTrack2
 	}
 };
@@ -206,7 +206,7 @@ SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3 =
 	0,
 
 	/// Sound track
-	{ 
+	{
 		OracleOfSeasonsOverworldThemeTrack3
 	}
 };
@@ -233,7 +233,7 @@ SoundROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND =
 
 	/// Target timer resolution in us
 	880,
-	
+
 	/// Tracks
 	(SoundChannel**)ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNELS
 };

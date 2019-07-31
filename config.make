@@ -4,11 +4,6 @@
 
 # VUEngine based plugins that the project uses
 PLUGINS 						= vuengine/entities/LowPowerEntity \
-								  vuengine/fonts/AstonishFont \
-								  vuengine/fonts/VirtualBoyFont \
-								  vuengine/other/AutomaticPause \
-								  vuengine/other/I18n \
-								  vuengine/other/SaveDataManager \
 								  vuengine/states/SplashScreens
 
 # Compiler's output

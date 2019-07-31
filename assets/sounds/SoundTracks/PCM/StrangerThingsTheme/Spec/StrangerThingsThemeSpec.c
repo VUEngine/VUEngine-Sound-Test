@@ -2,7 +2,7 @@
 /* VUEngine - Virtual Utopia Engine <http://vuengine.planetvb.com/>
  * A universal game engine for the Nintendo Virtual Boy
  *
- * Copyright (C) 2007, 2018 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
+ * Copyright (C) 2007, 2019 by Jorge Eremiev <jorgech3@gmail.com> and Christian Radke <chris@vr32.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
  * associated documentation files (the "Software"), to deal in the Software without restriction, including
@@ -108,12 +108,12 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_1_CONFIGURATI
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	0xF0,
 
 	/// SxEV1
 	0x00,
-	
+
 	/// SxFQH
 	0xFF,
 
@@ -144,12 +144,12 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_2_CONFIGURATI
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	0xF0,
 
 	/// SxEV1
 	0x00,
-	
+
 	/// SxFQH
 	0xFF,
 
@@ -180,12 +180,12 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_3_CONFIGURATI
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	0xF0,
 
 	/// SxEV1
 	0x00,
-	
+
 	/// SxFQH
 	0xFF,
 
@@ -216,12 +216,12 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_4_CONFIGURATI
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	0xF0,
 
 	/// SxEV1
 	0x00,
-	
+
 	/// SxFQH
 	0xFF,
 
@@ -252,12 +252,12 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_5_CONFIGURATI
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	0xF0,
 
 	/// SxEV1
 	0x00,
-	
+
 	/// SxFQH
 	0xFF,
 
@@ -288,12 +288,12 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_6_CONFIGURATI
 	/// SxRAM (this is overrode by the SoundManager)
 	0x00,
 
-	/// SxEV0 
+	/// SxEV0
 	0x70,
 
 	/// SxEV1
 	0x00,
-	
+
 	/// SxFQH
 	0xFF,
 
@@ -320,7 +320,7 @@ SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_1 =
 	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
 
 	/// Sound track
-	{ 
+	{
 		STRANGER_THINGS_THEME_SOUND_TRACK
 	}
 };
@@ -334,7 +334,7 @@ SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_2 =
 	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
 
 	/// Sound track
-	{ 
+	{
 		STRANGER_THINGS_THEME_SOUND_TRACK
 	}
 };
@@ -348,7 +348,7 @@ SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_3 =
 	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
 
 	/// Sound track
-	{ 
+	{
 		STRANGER_THINGS_THEME_SOUND_TRACK
 	}
 };
@@ -362,7 +362,7 @@ SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_4 =
 	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
 
 	/// Sound track
-	{ 
+	{
 		STRANGER_THINGS_THEME_SOUND_TRACK
 	}
 };
@@ -376,7 +376,7 @@ SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_5 =
 	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
 
 	/// Sound track
-	{ 
+	{
 		STRANGER_THINGS_THEME_SOUND_TRACK
 	}
 };
@@ -390,7 +390,7 @@ SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_1_6 =
 	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
 
 	/// Sound track
-	{ 
+	{
 		STRANGER_THINGS_THEME_SOUND_TRACK
 	}
 };
@@ -409,7 +409,7 @@ SoundChannelROM* STRANGER_THINGS_THEME_SOUND_CHANNELS[] =
 SoundROM STRANGER_THINGS_THEME_SOUND =
 {
 	/// Name
-	"Stranger Thing's theme",
+	"Stranger Things Theme",
 
 	/// Play in loop
 	true,
@@ -419,7 +419,7 @@ SoundROM STRANGER_THINGS_THEME_SOUND =
 
 	/// Target timer resolution in us
 	0,
-	
+
 	/// Tracks
 	(SoundChannel**)STRANGER_THINGS_THEME_SOUND_CHANNELS
 };
