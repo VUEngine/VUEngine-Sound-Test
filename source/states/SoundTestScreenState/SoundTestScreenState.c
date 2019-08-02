@@ -85,8 +85,10 @@ void SoundTestScreenState::enter(void* owner __attribute__ ((unused)))
 
 void SoundTestScreenState::onFadeInComplete(Object eventFirer __attribute((unused)))
 {
+#ifdef __SOUND_TEST
 	// Show up the sound test right away
 	Game::openTool(Game::getInstance(), ToolState::safeCast(SoundTestState::getInstance()));
+#endif
 }
 
 void SoundTestScreenState::suspend(void* owner)

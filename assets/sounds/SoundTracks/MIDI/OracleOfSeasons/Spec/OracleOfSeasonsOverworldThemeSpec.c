@@ -226,7 +226,7 @@ SoundROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND =
 	"Oracle of Seasons - Overworld",
 
 	/// Play in loop
-	true,
+	false,
 
 	/// Syncronize channels
 	false,
