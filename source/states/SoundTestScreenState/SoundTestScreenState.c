@@ -72,23 +72,20 @@ void SoundTestScreenState::enter(void* owner __attribute__ ((unused)))
 	// enable user input
 	Game::enableKeypad(Game::getInstance());
 
+#ifdef __SOUND_TEST
+	// Show up the sound test right away
+	Game::openTool(Game::getInstance(), ToolState::safeCast(SoundTestState::getInstance()));
+#endif
+
 	// start fade in effect
 	Camera::startEffect(Camera::getInstance(),
 		kFadeTo, // effect type
 		0, // initial delay (in ms)
 		NULL, // target brightness
 		__FADE_DELAY, // delay between fading steps (in ms)
-		(void (*)(Object, Object))SoundTestScreenState::onFadeInComplete, // callback function
-		Object::safeCast(this) // callback scope
+		NULL, // callback function
+		NULL // callback scope
 	);
-}
-
-void SoundTestScreenState::onFadeInComplete(Object eventFirer __attribute((unused)))
-{
-#ifdef __SOUND_TEST
-	// Show up the sound test right away
-	Game::openTool(Game::getInstance(), ToolState::safeCast(SoundTestState::getInstance()));
-#endif
 }
 
 void SoundTestScreenState::suspend(void* owner)
