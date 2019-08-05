@@ -17,7 +17,7 @@
 //											GAME SPECIFIC MACROS
 //---------------------------------------------------------------------------------------------------------
 
-#define __TOOLS 1
+#define __SOUND_TEST 1
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -62,7 +62,33 @@
 //											DEBUGGING TOOLS
 //---------------------------------------------------------------------------------------------------------
 
+// If tools already defined, enable all
 #ifdef __TOOLS
+
+// tools
+#ifndef __DEBUG_TOOLS
+#define __DEBUG_TOOLS
+#endif
+
+#ifndef __STAGE_EDITOR
+#define __STAGE_EDITOR
+#endif
+
+#ifndef __ANIMATION_INSPECTOR
+#define __ANIMATION_INSPECTOR
+#endif
+
+#ifndef __SOUND_TEST
+#define __SOUND_TEST
+#endif
+
+#endif
+
+// Enable different settings for each tool
+#ifdef __DEBUG_TOOLS
+#ifndef __TOOLS
+#define __TOOLS
+#endif
 
 // print frame rate
 #define __PRINT_FRAMERATE
@@ -74,12 +100,24 @@
 // enable streaming's profiling
 #define __PROFILE_STREAMING
 
-// tools
-#define __DEBUG_TOOLS
-#define __STAGE_EDITOR
-#define __ANIMATION_INSPECTOR
-#define __SOUND_TEST
+#endif
 
+#ifdef __STAGE_EDITOR
+#ifndef __TOOLS
+#define __TOOLS
+#endif
+#endif
+
+#ifdef __ANIMATION_INSPECTOR
+#ifndef __TOOLS
+#define __TOOLS
+#endif
+#endif
+
+#ifdef __SOUND_TEST
+#ifndef __TOOLS
+#define __TOOLS
+#endif
 #endif
 
 

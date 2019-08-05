@@ -69,10 +69,10 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_CONFIGURATION =
 	0x00,
 
 	/// SxFQH
-	0xFF,
+	0x00,
 
 	/// SxFQL
-	0xFF,
+	0x00,
 
 	/// Ch. 5 only
 	0x00,

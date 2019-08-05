@@ -67,7 +67,7 @@
 		"runDelayedMessagesAtHalfFrameRate": false
 	},
 	"game": {
-		"__tools": 1
+		"__soundTest": 1
 	},
 	"memoryPools": {
 		"cleanUp": false,
