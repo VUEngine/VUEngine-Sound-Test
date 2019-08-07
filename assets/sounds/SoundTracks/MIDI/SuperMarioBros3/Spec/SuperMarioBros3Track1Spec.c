@@ -284,9 +284,6 @@ SoundROM SUPER_MARIO_BROS_3_TRACK_1_SOUND =
 	/// Play in loop
 	true,
 
-	/// Syncronize channels
-	false,
-
 	/// Target timer resolution in us
 	4180,
 

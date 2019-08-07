@@ -228,9 +228,6 @@ SoundROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND =
 	/// Play in loop
 	false,
 
-	/// Syncronize channels
-	false,
-
 	/// Target timer resolution in us
 	880,
 

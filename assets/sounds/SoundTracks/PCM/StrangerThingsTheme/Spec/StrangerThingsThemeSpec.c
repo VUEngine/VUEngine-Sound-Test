@@ -113,9 +113,6 @@ SoundROM STRANGER_THINGS_THEME_SOUND =
 	/// Play in loop
 	true,
 
-	/// Syncronize channels
-	false,
-
 	/// Target timer resolution in us
 	0,
 
