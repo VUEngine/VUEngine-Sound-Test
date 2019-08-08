@@ -32,16 +32,18 @@
 //												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern const u8 OracleOfSeasonsOverworldThemeTrack1[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack2[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack3[];
+extern const u8 SuperMarioKartTitleTrack1[];
+extern const u8 SuperMarioKartTitleTrack2[];
+extern const u8 SuperMarioKartTitleTrack3[];
+extern const u8 SuperMarioKartTitleTrack4[];
+extern const u8 SuperMarioKartTitleTrack5[];
 
 
 //---------------------------------------------------------------------------------------------------------
 //												DEFINITIONS
 //---------------------------------------------------------------------------------------------------------
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_CONFIGURATION =
+SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_1_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -77,7 +79,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_C
 	false
 };
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_CONFIGURATION =
+SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_2_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -113,7 +115,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_C
 	false
 };
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_CONFIGURATION =
+SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_3_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -149,68 +151,170 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_C
 	false
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1 =
+SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_4_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kMIDI,
+
+	/// SxINT
+	0x9F,
+
+	/// Volume SxLRV
+	0xFF,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0
+	0xF0,
+
+	/// SxEV1
+	0x00,
+
+	/// SxFQH
+	0x00,
+
+	/// SxFQL
+	0x00,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	sawtoothWaveForm,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_5_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kMIDI,
+
+	/// SxINT
+	0x9F,
+
+	/// Volume SxLRV
+	0xFF,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0
+	0xF0,
+
+	/// SxEV1
+	0x00,
+
+	/// SxFQH
+	0x00,
+
+	/// SxFQL
+	0x00,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	sawtoothWaveForm,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_1 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_CONFIGURATION,
+	(SoundChannelConfiguration*)&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_1_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack1
+		SuperMarioKartTitleTrack1
 	}
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2 =
+SoundChannelROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_2 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_CONFIGURATION,
+	(SoundChannelConfiguration*)&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_2_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack2
+		SuperMarioKartTitleTrack2
 	}
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3 =
+SoundChannelROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_3 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_CONFIGURATION,
+	(SoundChannelConfiguration*)&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_3_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack3
+		SuperMarioKartTitleTrack3
+	}
+};
+
+SoundChannelROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_4 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*)&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_4_CONFIGURATION,
+
+	/// Length (PCM)
+	0,
+
+	/// Sound track
+	{
+		SuperMarioKartTitleTrack4
+	}
+};
+
+SoundChannelROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_5 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*)&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_5_CONFIGURATION,
+
+	/// Length (PCM)
+	0,
+
+	/// Sound track
+	{
+		SuperMarioKartTitleTrack5
 	}
 };
 
 
-SoundChannelROM* ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNELS[] =
+SoundChannelROM* SUPER_MARIO_KART_TITLE_SOUND_CHANNELS[] =
 {
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1,
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2,
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3,
+	&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_1,
+	&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_2,
+	&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_3,
+	&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_4,
+	&SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_5,
 	NULL
 };
 
-SoundROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND =
+SoundROM SUPER_MARIO_KART_TITLE_SOUND =
 {
 	/// Name
-	"Oracle of Seasons - Overworld",
+	"Super Mario Kart - Title",
 
 	/// Play in loop
 	false,
 
 	/// Target timer resolution in us
-	880,
+	980,
 
 	/// Tracks
-	(SoundChannel**)ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNELS
+	(SoundChannel**)SUPER_MARIO_KART_TITLE_SOUND_CHANNELS
 };

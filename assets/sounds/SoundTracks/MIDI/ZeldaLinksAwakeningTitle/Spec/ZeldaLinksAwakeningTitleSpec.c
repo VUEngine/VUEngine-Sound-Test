@@ -32,16 +32,17 @@
 //												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern const u8 OracleOfSeasonsOverworldThemeTrack1[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack2[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack3[];
+extern const u8 ZeldaLinksAwakeningTitleTrack1[];
+extern const u8 ZeldaLinksAwakeningTitleTrack2[];
+extern const u8 ZeldaLinksAwakeningTitleTrack3[];
+extern const u8 ZeldaLinksAwakeningTitleTrack4[];
 
 
 //---------------------------------------------------------------------------------------------------------
 //												DEFINITIONS
 //---------------------------------------------------------------------------------------------------------
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_CONFIGURATION =
+SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_1_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -77,7 +78,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_C
 	false
 };
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_CONFIGURATION =
+SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_2_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -113,7 +114,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_C
 	false
 };
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_CONFIGURATION =
+SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_3_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -149,68 +150,118 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_C
 	false
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1 =
+SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_4_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kMIDI,
+
+	/// SxINT
+	0x9F,
+
+	/// Volume SxLRV
+	0xFF,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0
+	0xF0,
+
+	/// SxEV1
+	0x00,
+
+	/// SxFQH
+	0x00,
+
+	/// SxFQL
+	0x00,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	sawtoothWaveForm,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_1 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_CONFIGURATION,
+	(SoundChannelConfiguration*)&ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_1_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack1
+		ZeldaLinksAwakeningTitleTrack1
 	}
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2 =
+SoundChannelROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_2 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_CONFIGURATION,
+	(SoundChannelConfiguration*)&ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_2_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack2
+		ZeldaLinksAwakeningTitleTrack2
 	}
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3 =
+SoundChannelROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_3 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_CONFIGURATION,
+	(SoundChannelConfiguration*)&ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_3_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack3
+		ZeldaLinksAwakeningTitleTrack3
 	}
 };
 
-
-SoundChannelROM* ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNELS[] =
+SoundChannelROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_4 =
 {
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1,
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2,
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3,
+	/// Configuration
+	(SoundChannelConfiguration*)&ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_4_CONFIGURATION,
+
+	/// Length (PCM)
+	0,
+
+	/// Sound track
+	{
+		ZeldaLinksAwakeningTitleTrack4
+	}
+};
+
+SoundChannelROM* ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNELS[] =
+{
+	&ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_1,
+	&ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_2,
+	&ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_3,
+	&ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_4,
 	NULL
 };
 
-SoundROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND =
+SoundROM ZELDA_LINKS_AWAKENING_TITLE_SOUND =
 {
 	/// Name
-	"Oracle of Seasons - Overworld",
+	"Zelda Link's Awakening - Title",
 
 	/// Play in loop
 	false,
 
 	/// Target timer resolution in us
-	880,
+	4240,
 
 	/// Tracks
-	(SoundChannel**)ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNELS
+	(SoundChannel**)ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNELS
 };

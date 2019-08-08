@@ -32,16 +32,18 @@
 //												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern const u8 OracleOfSeasonsOverworldThemeTrack1[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack2[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack3[];
+extern const u8 TerranigmaAJourneyBeginsTrack1[];
+extern const u8 TerranigmaAJourneyBeginsTrack2[];
+extern const u8 TerranigmaAJourneyBeginsTrack3[];
+extern const u8 TerranigmaAJourneyBeginsTrack4[];
+extern const u8 TerranigmaAJourneyBeginsTrack5[];
 
 
 //---------------------------------------------------------------------------------------------------------
 //												DEFINITIONS
 //---------------------------------------------------------------------------------------------------------
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_CONFIGURATION =
+SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_1_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -77,7 +79,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_C
 	false
 };
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_CONFIGURATION =
+SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_2_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -113,7 +115,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_C
 	false
 };
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_CONFIGURATION =
+SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_3_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -149,68 +151,169 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_C
 	false
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1 =
+SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_4_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kMIDI,
+
+	/// SxINT
+	0x9F,
+
+	/// Volume SxLRV
+	0xFF,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0
+	0xF0,
+
+	/// SxEV1
+	0x00,
+
+	/// SxFQH
+	0x00,
+
+	/// SxFQL
+	0x00,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	sawtoothWaveForm,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_5_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kMIDI,
+
+	/// SxINT
+	0x9F,
+
+	/// Volume SxLRV
+	0xFF,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0
+	0xF0,
+
+	/// SxEV1
+	0x00,
+
+	/// SxFQH
+	0x00,
+
+	/// SxFQL
+	0x00,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	sawtoothWaveForm,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_1 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_CONFIGURATION,
+	(SoundChannelConfiguration*)&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_1_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack1
+		TerranigmaAJourneyBeginsTrack1
 	}
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2 =
+SoundChannelROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_2 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_CONFIGURATION,
+	(SoundChannelConfiguration*)&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_2_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack2
+		TerranigmaAJourneyBeginsTrack2
 	}
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3 =
+SoundChannelROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_3 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_CONFIGURATION,
+	(SoundChannelConfiguration*)&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_3_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack3
+		TerranigmaAJourneyBeginsTrack3
 	}
 };
 
-
-SoundChannelROM* ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNELS[] =
+SoundChannelROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_4 =
 {
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1,
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2,
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3,
+	/// Configuration
+	(SoundChannelConfiguration*)&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_4_CONFIGURATION,
+
+	/// Length (PCM)
+	0,
+
+	/// Sound track
+	{
+		TerranigmaAJourneyBeginsTrack4
+	}
+};
+
+SoundChannelROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_5 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*)&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_5_CONFIGURATION,
+
+	/// Length (PCM)
+	0,
+
+	/// Sound track
+	{
+		TerranigmaAJourneyBeginsTrack5
+	}
+};
+
+SoundChannelROM* TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNELS[] =
+{
+	&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_1,
+	&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_2,
+	&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_3,
+	&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_4,
+	&TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_5,
 	NULL
 };
 
-SoundROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND =
+SoundROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND =
 {
 	/// Name
-	"Oracle of Seasons - Overworld",
+	"Terranigma - A Journey Begins",
 
 	/// Play in loop
 	false,
 
 	/// Target timer resolution in us
-	880,
+	13840,
 
 	/// Tracks
-	(SoundChannel**)ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNELS
+	(SoundChannel**)TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNELS
 };

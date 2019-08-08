@@ -33,6 +33,18 @@
 
 
 //---------------------------------------------------------------------------------------------------------
+// 										DECLARATIONS
+//---------------------------------------------------------------------------------------------------------
+
+extern Sound ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND;
+extern Sound SUPER_MARIO_BROS_3_TRACK_1_SOUND;
+extern Sound MYSTIC_QUEST_OVERWORLD_SOUND;
+extern Sound STRANGER_THINGS_THEME_SOUND;
+extern Sound SUPER_MARIO_KART_TITLE_SOUND;
+extern Sound TERRANIGMA_A_JOURNEY_BEGINS_SOUND;
+
+
+//---------------------------------------------------------------------------------------------------------
 // 										DEFINITIONS
 //---------------------------------------------------------------------------------------------------------
 
@@ -54,14 +66,13 @@ const UserAnimatedEntity _userAnimatedEntities[] =
 	{NULL, ""},
 };
 
-extern Sound ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND;
-extern Sound SUPER_MARIO_BROS_3_TRACK_1_SOUND;
-extern Sound STRANGER_THINGS_THEME_SOUND;
-
 SoundROM* const _userSounds[] =
 {
 	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND,
 	&SUPER_MARIO_BROS_3_TRACK_1_SOUND,
+	&MYSTIC_QUEST_OVERWORLD_SOUND,
+	&SUPER_MARIO_KART_TITLE_SOUND,
+	&TERRANIGMA_A_JOURNEY_BEGINS_SOUND,
 	&STRANGER_THINGS_THEME_SOUND,
 	NULL
 };

@@ -32,16 +32,18 @@
 //												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern const u8 OracleOfSeasonsOverworldThemeTrack1[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack2[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack3[];
+extern const u8 MysticQuestOverworldTrack1[];
+extern const u8 MysticQuestOverworldTrack2[];
+extern const u8 MysticQuestOverworldTrack3[];
+extern const u8 MysticQuestOverworldTrack4[];
+extern const u8 MysticQuestOverworldTrack5[];
 
 
 //---------------------------------------------------------------------------------------------------------
 //												DEFINITIONS
 //---------------------------------------------------------------------------------------------------------
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_CONFIGURATION =
+SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_1_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -71,13 +73,13 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_C
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	trumpetWaveForm,
 
 	/// Is modulation
 	false
 };
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_CONFIGURATION =
+SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_2_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -107,13 +109,13 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_C
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	violinWaveForm,
 
 	/// Is modulation
 	false
 };
 
-SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_CONFIGURATION =
+SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_3_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kMIDI,
@@ -143,74 +145,176 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_C
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	violinWaveForm,
 
 	/// Is modulation
 	false
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1 =
+SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_4_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kMIDI,
+
+	/// SxINT
+	0x9F,
+
+	/// Volume SxLRV
+	0xFF,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0
+	0xF0,
+
+	/// SxEV1
+	0x00,
+
+	/// SxFQH
+	0x00,
+
+	/// SxFQL
+	0x00,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	violinWaveForm,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_5_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kMIDI,
+
+	/// SxINT
+	0x9F,
+
+	/// Volume SxLRV
+	0xFF,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0
+	0xF0,
+
+	/// SxEV1
+	0x00,
+
+	/// SxFQH
+	0x00,
+
+	/// SxFQL
+	0x00,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	trumpetWaveForm,
+
+	/// Is modulation
+	false
+};
+
+SoundChannelROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_1 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_CONFIGURATION,
+	(SoundChannelConfiguration*)&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_1_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack1
+		MysticQuestOverworldTrack1
 	}
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2 =
+SoundChannelROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_2 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_CONFIGURATION,
+	(SoundChannelConfiguration*)&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_2_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack2
+		MysticQuestOverworldTrack2
 	}
 };
 
-SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3 =
+SoundChannelROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_3 =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_CONFIGURATION,
+	(SoundChannelConfiguration*)&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_3_CONFIGURATION,
 
 	/// Length (PCM)
 	0,
 
 	/// Sound track
 	{
-		OracleOfSeasonsOverworldThemeTrack3
+		MysticQuestOverworldTrack3
+	}
+};
+
+SoundChannelROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_4 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*)&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_4_CONFIGURATION,
+
+	/// Length (PCM)
+	0,
+
+	/// Sound track
+	{
+		MysticQuestOverworldTrack4
+	}
+};
+
+SoundChannelROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_5 =
+{
+	/// Configuration
+	(SoundChannelConfiguration*)&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_5_CONFIGURATION,
+
+	/// Length (PCM)
+	0,
+
+	/// Sound track
+	{
+		MysticQuestOverworldTrack5
 	}
 };
 
 
-SoundChannelROM* ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNELS[] =
+SoundChannelROM* MYSTIC_QUEST_OVERWORLD_SOUND_CHANNELS[] =
 {
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1,
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2,
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3,
+	&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_1,
+	&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_2,
+	&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_3,
+	&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_4,
+	&MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_5,
 	NULL
 };
 
-SoundROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND =
+SoundROM MYSTIC_QUEST_OVERWORLD_SOUND =
 {
 	/// Name
-	"Oracle of Seasons - Overworld",
+	"Mystic Quest - Overworld",
 
 	/// Play in loop
 	false,
 
 	/// Target timer resolution in us
-	880,
+	5220,
 
 	/// Tracks
-	(SoundChannel**)ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNELS
+	(SoundChannel**)MYSTIC_QUEST_OVERWORLD_SOUND_CHANNELS
 };
