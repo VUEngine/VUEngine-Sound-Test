@@ -32,11 +32,13 @@
 //												DEFINITIONS
 //---------------------------------------------------------------------------------------------------------
 
-#define STRANGER_THINGS_THEME_SOUND_TRACK STRANGER_THINGS_THEME_SOUND_TRACK
+#define STRANGER_THINGS_THEME_SOUND_TRACK_L STRANGER_THINGS_THEME_SOUND_TRACK_L
+#define STRANGER_THINGS_THEME_SOUND_TRACK_R STRANGER_THINGS_THEME_SOUND_TRACK_R
 
-extern const u8 STRANGER_THINGS_THEME_SOUND_TRACK[];
+extern const u8 STRANGER_THINGS_THEME_SOUND_TRACK_L[];
+extern const u8 STRANGER_THINGS_THEME_SOUND_TRACK_R[];
 
-#define STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH		731100
+#define STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH		449024
 
 #define WAVE_AMPLITUDE			63
 
@@ -48,7 +50,7 @@ const s8 strangerThingsThemeWave[32] =
 	WAVE_AMPLITUDE, WAVE_AMPLITUDE, WAVE_AMPLITUDE, WAVE_AMPLITUDE, WAVE_AMPLITUDE, WAVE_AMPLITUDE, WAVE_AMPLITUDE, WAVE_AMPLITUDE,
 };
 
-SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_CONFIGURATION =
+SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_L_CONFIGURATION =
 {
 	/// kMIDI, kPCM
 	kPCM,
@@ -80,29 +82,84 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_CONFIGURATION =
 	/// Waveform data pointer
 	strangerThingsThemeWave,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_L
 };
 
-SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL =
+SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_R_CONFIGURATION =
+{
+	/// kMIDI, kPCM
+	kPCM,
+
+	/// SxINT
+	0x00,
+
+	/// Volume SxLRV
+	0x00,
+
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0
+	0xF0,
+
+	/// SxEV1
+	0x00,
+
+	/// SxFQH
+	0x00,
+
+	/// SxFQL
+	0x00,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	strangerThingsThemeWave,
+
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_R
+};
+
+SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_L =
 {
 	/// Configuration
-	(SoundChannelConfiguration*) &STRANGER_THINGS_THEME_SOUND_CHANNEL_CONFIGURATION,
+	(SoundChannelConfiguration*) &STRANGER_THINGS_THEME_SOUND_CHANNEL_L_CONFIGURATION,
 
 	/// Length (PCM)
 	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
 
 	/// Sound track
 	{
-		STRANGER_THINGS_THEME_SOUND_TRACK
+		STRANGER_THINGS_THEME_SOUND_TRACK_L
 	}
 };
 
+SoundChannelROM STRANGER_THINGS_THEME_SOUND_CHANNEL_R =
+{
+	/// Configuration
+	(SoundChannelConfiguration*) &STRANGER_THINGS_THEME_SOUND_CHANNEL_R_CONFIGURATION,
+
+	/// Length (PCM)
+	STRANGER_THINGS_THEME_SOUND_TRACK_LENGTH,
+
+	/// Sound track
+	{
+		STRANGER_THINGS_THEME_SOUND_TRACK_R
+	}
+};
 
 SoundChannelROM* STRANGER_THINGS_THEME_SOUND_CHANNELS[] =
 {
-	&STRANGER_THINGS_THEME_SOUND_CHANNEL,
-	&STRANGER_THINGS_THEME_SOUND_CHANNEL,
+	&STRANGER_THINGS_THEME_SOUND_CHANNEL_L,
+	&STRANGER_THINGS_THEME_SOUND_CHANNEL_R,
 	NULL
 };
 

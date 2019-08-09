@@ -75,8 +75,11 @@ SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_1_CONFIGURATIO
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_2_CONFIGURATION =
@@ -111,8 +114,11 @@ SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_2_CONFIGURATIO
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_3_CONFIGURATION =
@@ -147,8 +153,11 @@ SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_3_CONFIGURATIO
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_4_CONFIGURATION =
@@ -183,8 +192,11 @@ SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_4_CONFIGURATIO
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_5_CONFIGURATION =
@@ -219,8 +231,11 @@ SoundChannelConfigurationROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_5_CONFIGURATIO
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelROM SUPER_MARIO_KART_TITLE_SOUND_CHANNEL_1 =

@@ -73,8 +73,11 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_C
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_CONFIGURATION =
@@ -109,8 +112,11 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_C
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_CONFIGURATION =
@@ -145,8 +151,11 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_C
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1 =

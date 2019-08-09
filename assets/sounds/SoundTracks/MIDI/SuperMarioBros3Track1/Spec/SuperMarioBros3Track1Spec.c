@@ -99,8 +99,11 @@ SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_1_CONFIGUR
 	/// Waveform data pointer
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_1_WAVEFORM,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_2_CONFIGURATION =
@@ -135,8 +138,11 @@ SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_2_CONFIGUR
 	/// Waveform data pointer
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_2_WAVEFORM,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_3_CONFIGURATION =
@@ -171,8 +177,11 @@ SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_3_CONFIGUR
 	/// Waveform data pointer
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_3_WAVEFORM,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_4_CONFIGURATION =
@@ -207,8 +216,11 @@ SoundChannelConfigurationROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_4_CONFIGUR
 	/// Waveform data pointer
 	SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_4_WAVEFORM,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelROM SUPER_MARIO_BROS_3_TRACK_1_SOUND_CHANNEL_1 =

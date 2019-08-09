@@ -75,8 +75,11 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_1_CONFIGU
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_2_CONFIGURATION =
@@ -111,8 +114,11 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_2_CONFIGU
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_3_CONFIGURATION =
@@ -147,8 +153,11 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_3_CONFIGU
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_4_CONFIGURATION =
@@ -183,8 +192,11 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_4_CONFIGU
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_5_CONFIGURATION =
@@ -219,8 +231,11 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_5_CONFIGU
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// Is modulation
-	false
+	/// kSoundNormal, kSoundModulation, kSoundNoise
+	kSoundNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
 SoundChannelROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_1 =
