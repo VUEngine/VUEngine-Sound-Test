@@ -57,7 +57,7 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_1_CONFIGU
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
@@ -96,7 +96,7 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_2_CONFIGU
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
@@ -135,7 +135,7 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_3_CONFIGU
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
@@ -174,7 +174,7 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_4_CONFIGU
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,

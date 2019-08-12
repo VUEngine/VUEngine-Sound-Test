@@ -58,7 +58,7 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_1_CONFIGU
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
@@ -97,7 +97,7 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_2_CONFIGU
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
@@ -136,7 +136,7 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_3_CONFIGU
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
@@ -175,7 +175,7 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_4_CONFIGU
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
@@ -214,7 +214,7 @@ SoundChannelConfigurationROM TERRANIGMA_A_JOURNEY_BEGINS_SOUND_CHANNEL_5_CONFIGU
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,

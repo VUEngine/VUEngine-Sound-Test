@@ -56,7 +56,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_C
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
@@ -95,7 +95,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_C
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
@@ -134,7 +134,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_C
 	0x00,
 
 	/// SxEV0
-	0xF0,
+	0x40,
 
 	/// SxEV1
 	0x00,
