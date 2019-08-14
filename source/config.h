@@ -17,7 +17,7 @@
 //											GAME SPECIFIC MACROS
 //---------------------------------------------------------------------------------------------------------
 
-#define __SOUND_TEST 1
+#define __SOUND_TEST true
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -50,7 +50,7 @@
 // dimm screen to make it easier to read the profiling output
 #undef __DIMM_FOR_PROFILING
 
-// print the game's current process while the VIP's frame start and idle interrupts are fired, but the 
+// print the game's current process while the VIP's frame start and idle interrupts are fired, but the
 // game frame is still pending processes to complete
 #undef __PROFILE_GAME_STATE_DURING_VIP_INTERRUPT
 
@@ -180,7 +180,7 @@
 //											FRAME RATE CONTROL
 //---------------------------------------------------------------------------------------------------------
 
-// when defined, the engine skips to the next game frame when the VIP's GAMESTART interrupt is fired 
+// when defined, the engine skips to the next game frame when the VIP's GAMESTART interrupt is fired
 // beforethe current game frame is done
 #undef __FORCE_VIP_SYNC
 
@@ -362,19 +362,6 @@
 //												SOUND
 //---------------------------------------------------------------------------------------------------------
 
-// channels per bgms
-#define __BGM_CHANNELS								2
-
-// channels per fx
-#define __FX_CHANNELS								1
-
-// simultaneous bgms
-#define __BGMS										1
-
-// simultaneous fx
-#define __FXS										2
-
-#define __TOTAL_SOUNDS								(__BGMS + __FXS)
 #define __LEFT_EAR_CENTER							96
 #define __RIGHT_EAR_CENTER							288
 
