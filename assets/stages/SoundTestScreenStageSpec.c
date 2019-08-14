@@ -26,6 +26,7 @@
 #include <Stage.h>
 #include <Printing.h>
 #include <CharSet.h>
+#include <Fonts.h>
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -33,7 +34,6 @@
 //---------------------------------------------------------------------------------------------------------
 
 extern EntitySpec LOW_POWER_INDICATOR_LB;
-extern FontSpec VUENGINE_FONT;
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ PositionedEntityROMSpec SOUND_TEST_SCREEN_STAGE_ST_UI_ENTITIES[] =
 
 FontROMSpec* const SOUND_TEST_SCREEN_STAGE_ST_FONTS[] =
 {
-	&VUENGINE_FONT,
+	&DEFAULT_FONT,
 
 	NULL
 };
