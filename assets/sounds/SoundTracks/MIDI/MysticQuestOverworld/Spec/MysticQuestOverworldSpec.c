@@ -229,7 +229,7 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_5_CONFIGURATIO
 	0x00,
 
 	/// Waveform data pointer
-	trumpetWaveForm,
+	sawtoothWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
