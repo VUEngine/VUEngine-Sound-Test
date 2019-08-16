@@ -75,8 +75,8 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_1_CONFIGURATIO
 	/// Waveform data pointer
 	trumpetWaveForm,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_LR
@@ -114,8 +114,8 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_2_CONFIGURATIO
 	/// Waveform data pointer
 	violinWaveForm,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_LR
@@ -153,8 +153,8 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_3_CONFIGURATIO
 	/// Waveform data pointer
 	violinWaveForm,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_LR
@@ -192,8 +192,8 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_4_CONFIGURATIO
 	/// Waveform data pointer
 	violinWaveForm,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_LR
@@ -231,8 +231,8 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_5_CONFIGURATIO
 	/// Waveform data pointer
 	trumpetWaveForm,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_LR

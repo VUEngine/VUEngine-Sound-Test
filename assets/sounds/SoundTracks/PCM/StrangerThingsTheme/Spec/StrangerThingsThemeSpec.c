@@ -82,8 +82,8 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_L_CONFIGURATION
 	/// Waveform data pointer
 	strangerThingsThemeWave,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_L
@@ -121,8 +121,8 @@ SoundChannelConfigurationROM STRANGER_THINGS_THEME_SOUND_CHANNEL_R_CONFIGURATION
 	/// Waveform data pointer
 	strangerThingsThemeWave,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_R

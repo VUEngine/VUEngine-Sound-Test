@@ -74,8 +74,8 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_1_CONFIGU
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_LR
@@ -113,8 +113,8 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_2_CONFIGU
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_LR
@@ -152,8 +152,8 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_3_CONFIGU
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_LR
@@ -191,8 +191,8 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_4_CONFIGU
 	/// Waveform data pointer
 	sawtoothWaveForm,
 
-	/// kSoundNormal, kSoundModulation, kSoundNoise
-	kSoundNormal,
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
 
 	/// Volume
 	__SOUND_LR
