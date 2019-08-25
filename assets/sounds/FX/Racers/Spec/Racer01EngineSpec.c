@@ -1,3 +1,4 @@
+
 /* VUEngine - Virtual Utopia Engine <http://vuengine.planetvb.com/>
  * A universal game engine for the Nintendo Virtual Boy
  *
@@ -21,88 +22,94 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-// 												INCLUDES
+//												INCLUDES
 //---------------------------------------------------------------------------------------------------------
 
-#include <Game.h>
-#include <Debug.h>
-#include <StageEditor.h>
-#include <AnimationInspector.h>
-#include <ToolState.h>
-#include <SoundTest.h>
+#include <SoundManager.h>
 
 
 //---------------------------------------------------------------------------------------------------------
-// 										DECLARATIONS
+//												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern Sound ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND;
-extern Sound SUPER_MARIO_BROS_3_TRACK_1_SOUND;
-extern Sound MYSTIC_QUEST_OVERWORLD_SOUND;
-extern Sound STRANGER_THINGS_THEME_SOUND;
-
-extern Sound RACER_01_ENGINE_SOUND;
-extern Sound RACER_02_ENGINE_SOUND;
-extern Sound RACER_03_ENGINE_SOUND;
-
-extern Sound RACER_01_CRASH_SOUND;
-extern Sound RACER_02_CRASH_SOUND;
-extern Sound RACER_03_CRASH_SOUND;
-
-extern Sound RACER_01_EXPLODE_SOUND;
-extern Sound RACER_02_EXPLODE_SOUND;
-extern Sound RACER_03_EXPLODE_SOUND;
-
-extern Sound RACER_01_RAM_SOUND;
-extern Sound RACER_02_RAM_SOUND;
-extern Sound RACER_03_RAM_SOUND;
+extern const u8 Racer01EngineTrack1[];
 
 
 //---------------------------------------------------------------------------------------------------------
-// 										DEFINITIONS
+//												DEFINITIONS
 //---------------------------------------------------------------------------------------------------------
 
-#ifdef __DEBUG_TOOLS
-const ClassSizeData _userClassesSizeData[] =
+SoundChannelConfigurationROM RACER_01_ENGINE_SOUND_CHANNEL_1_CONFIGURATION =
 {
-	{NULL, ""},
-};
-#endif
+	/// kMIDI, kPCM
+	kMIDI,
 
+	/// SxINT
+	0x00,
 
-const UserObject _userObjects[] =
-{
-	{NULL, ""},
-};
+	/// Volume SxLRV
+	0x00,
 
-const UserAnimatedEntity _userAnimatedEntities[] =
-{
-	{NULL, ""},
+	/// SxRAM (this is overrode by the SoundManager)
+	0x00,
+
+	/// SxEV0
+	0xF0,
+
+	/// SxEV1
+	0x00,
+
+	/// SxFQH
+	0x00,
+
+	/// SxFQL
+	0x00,
+
+	/// Ch. 5 only
+	0x00,
+
+	/// Waveform data pointer
+	triangleWaveForm,
+
+	/// kChannelNormal, kChannelModulation, kChannelNoise
+	kChannelNormal,
+
+	/// Volume
+	__SOUND_LR
 };
 
-SoundROM* const _userSounds[] =
+SoundChannelROM RACER_01_ENGINE_SOUND_CHANNEL_1 =
 {
-	&ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND,
-	&SUPER_MARIO_BROS_3_TRACK_1_SOUND,
-	&MYSTIC_QUEST_OVERWORLD_SOUND,
-	&RACER_01_ENGINE_SOUND,
-	&RACER_02_ENGINE_SOUND,
-	&RACER_03_ENGINE_SOUND,
-	&RACER_01_CRASH_SOUND,
-	&RACER_02_CRASH_SOUND,
-	&RACER_03_CRASH_SOUND,
-	&RACER_01_EXPLODE_SOUND,
-	&RACER_02_EXPLODE_SOUND,
-	&RACER_03_EXPLODE_SOUND,
-	&RACER_01_RAM_SOUND,
-	&RACER_02_RAM_SOUND,
-	&RACER_03_RAM_SOUND,
-	&STRANGER_THINGS_THEME_SOUND,
+	/// Configuration
+	(SoundChannelConfiguration*)&RACER_01_ENGINE_SOUND_CHANNEL_1_CONFIGURATION,
+
+	/// Length (PCM)
+	0,
+
+	/// Sound track
+	{
+		Racer01EngineTrack1
+	}
+};
+
+
+SoundChannelROM* RACER_01_ENGINE_SOUND_CHANNELS[] =
+{
+	&RACER_01_ENGINE_SOUND_CHANNEL_1,
 	NULL
 };
 
-const ToolState _userToolStates[] =
+SoundROM RACER_01_ENGINE_SOUND =
 {
-	NULL
-};
+	/// Name
+	"Racer 01 Engine",
 
+	/// Play in loop
+	true,
+
+	/// Target timer resolution in us
+	3000,
+
+	/// Tracks
+	(SoundChannel**)RACER_01_ENGINE_SOUND_CHANNELS
+};

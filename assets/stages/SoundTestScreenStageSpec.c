@@ -84,6 +84,7 @@ StageROMSpec SOUND_TEST_SCREEN_STAGE_ST =
 	// Sound config
 	{
 		__DEFAULT_PCM_HZ,
+		0,
 	},
 
 	// level
