@@ -102,7 +102,7 @@ SoundChannelROM* RACER_03_EXPLODE_SOUND_CHANNELS[] =
 SoundROM RACER_03_EXPLODE_SOUND =
 {
 	/// Name
-	"Racer 03 Explode",
+	"SFX: Explosion",
 
 	/// Play in loop
 	false,

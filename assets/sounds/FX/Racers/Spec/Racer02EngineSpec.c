@@ -102,7 +102,7 @@ SoundChannelROM* RACER_02_ENGINE_SOUND_CHANNELS[] =
 SoundROM RACER_02_ENGINE_SOUND =
 {
 	/// Name
-	"Racer 02 Engine",
+	"SFX: Engine",
 
 	/// Play in loop
 	true,

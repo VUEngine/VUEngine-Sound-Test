@@ -102,7 +102,7 @@ SoundChannelROM* RACER_01_RAM_SOUND_CHANNELS[] =
 SoundROM RACER_01_RAM_SOUND =
 {
 	/// Name
-	"Racer 01 Ram",
+	"SFX: Error",
 
 	/// Play in loop
 	false,
