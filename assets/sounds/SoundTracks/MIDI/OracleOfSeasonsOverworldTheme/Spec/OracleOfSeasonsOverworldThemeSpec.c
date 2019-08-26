@@ -215,7 +215,7 @@ SoundROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND =
 	"Oracle of Seasons - Overworld",
 
 	/// Play in loop
-	false,
+	true,
 
 	/// Target timer resolution in us
 	880,
