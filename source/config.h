@@ -17,7 +17,15 @@
 //											GAME SPECIFIC MACROS
 //---------------------------------------------------------------------------------------------------------
 
-#define __SOUND_TEST true
+#define __SOUND_TEST 1
+
+
+//---------------------------------------------------------------------------------------------------------
+//											COMMUNICATIONS
+//---------------------------------------------------------------------------------------------------------
+
+// Enable communications at the start of the game
+#undef __ENABLE_COMMUNICATIONS
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -25,24 +33,20 @@
 //---------------------------------------------------------------------------------------------------------
 
 // print memory pool's status
-#undef __PRINT_MEMORY_POOL_STATUS
-#undef __PRINT_DETAILED_MEMORY_POOL_STATUS
+#undef __SHOW_MEMORY_POOL_STATUS
+#undef __SHOW_DETAILED_MEMORY_POOL_STATUS
+
+// Enable profiler
+#undef __ENABLE_PROFILER
 
 // print frame rate
 #undef __PRINT_FRAMERATE
 
 // alert stack overflows
-#undef __ALERT_STACK_OVERFLOW
-
-// enable detailed profiling of each of the game's main processes
-// • it is more useful when __TIMER_RESOLUTION approaches 1
-#undef __PROFILE_GAME
+#undef __SHOW_STACK_OVERFLOW_ALERT
 
 // enable streaming's profiling
 #undef __PROFILE_STREAMING
-
-// show games's profiling during game
-#undef __SHOW_GAME_PROFILING
 
 // show streaming's profiling during game
 #undef __SHOW_STREAMING_PROFILING
@@ -50,12 +54,11 @@
 // dimm screen to make it easier to read the profiling output
 #undef __DIMM_FOR_PROFILING
 
-// print the game's current process while the VIP's frame start and idle interrupts are fired, but the
-// game frame is still pending processes to complete
-#undef __PROFILE_GAME_STATE_DURING_VIP_INTERRUPT
-
 // alert vip's overtime
-#undef __ALERT_VIP_OVERTIME
+#undef __SHOW_VIP_OVERTIME_COUNT
+
+// stack headroom
+#define __STACK_HEADROOM								1000
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -89,16 +92,6 @@
 #ifndef __TOOLS
 #define __TOOLS
 #endif
-
-// print frame rate
-#define __PRINT_FRAMERATE
-
-// enable detailed profiling of each of the game's main processes
-// • it is more useful when __TIMER_RESOLUTION approaches 1
-#define __PROFILE_GAME
-
-// enable streaming's profiling
-#define __PROFILE_STREAMING
 
 #endif
 
@@ -158,7 +151,7 @@
 #define __MAXIMUM_Y_VIEW_DISTANCE					4096
 
 // distance between eyes
-#define __BASE_FACTOR								32
+#define __BASE_FACTOR								21
 
 // player's eyes' horizontal position
 #define __HORIZONTAL_VIEW_POINT_CENTER				192
@@ -170,7 +163,7 @@
 #define __PARALLAX_CORRECTION_FACTOR				4
 
 // affects the strength of the scaling
-#define __SCALING_MODIFIER_FACTOR					1.0f
+#define __SCALING_MODIFIER_FACTOR					0.2f
 
 // minimum number of pixels that the camera can move
 #define __CAMERA_MINIMUM_DISPLACEMENT_PIXELS_POWER	1
@@ -227,35 +220,39 @@
 #undef __MEMORY_POOL_CLEAN_UP
 
 #undef __MEMORY_POOLS
-#define __MEMORY_POOLS								11
+#define __MEMORY_POOLS								13
 
 #undef __MEMORY_POOL_ARRAYS
 #define __MEMORY_POOL_ARRAYS \
-	__BLOCK_DEFINITION(164, 1) \
-	__BLOCK_DEFINITION(152, 10) \
-	__BLOCK_DEFINITION(140, 10) \
-	__BLOCK_DEFINITION(116, 40) \
-	__BLOCK_DEFINITION(108, 40) \
-	__BLOCK_DEFINITION(80, 50) \
-	__BLOCK_DEFINITION(68, 60) \
-	__BLOCK_DEFINITION(40, 30) \
-	__BLOCK_DEFINITION(28, 350) \
-	__BLOCK_DEFINITION(20, 700) \
-	__BLOCK_DEFINITION(16, 450) \
+	__BLOCK_DEFINITION(320, 9) \
+	__BLOCK_DEFINITION(180, 5) \
+	__BLOCK_DEFINITION(152, 16) \
+	__BLOCK_DEFINITION(116, 35) \
+	__BLOCK_DEFINITION(96, 60) \
+	__BLOCK_DEFINITION(60, 65) \
+	__BLOCK_DEFINITION(36, 65) \
+	__BLOCK_DEFINITION(32, 75) \
+	__BLOCK_DEFINITION(28, 140) \
+	__BLOCK_DEFINITION(24, 830) \
+	__BLOCK_DEFINITION(20, 280) \
+	__BLOCK_DEFINITION(16, 400) \
+	__BLOCK_DEFINITION(12, 60) \
 
 #undef __SET_MEMORY_POOL_ARRAYS
 #define __SET_MEMORY_POOL_ARRAYS \
-	__SET_MEMORY_POOL_ARRAY(164) \
+	__SET_MEMORY_POOL_ARRAY(320) \
+	__SET_MEMORY_POOL_ARRAY(180) \
 	__SET_MEMORY_POOL_ARRAY(152) \
-	__SET_MEMORY_POOL_ARRAY(140) \
 	__SET_MEMORY_POOL_ARRAY(116) \
-	__SET_MEMORY_POOL_ARRAY(108) \
-	__SET_MEMORY_POOL_ARRAY(80) \
-	__SET_MEMORY_POOL_ARRAY(68) \
-	__SET_MEMORY_POOL_ARRAY(40) \
+	__SET_MEMORY_POOL_ARRAY(96) \
+	__SET_MEMORY_POOL_ARRAY(60) \
+	__SET_MEMORY_POOL_ARRAY(36) \
+	__SET_MEMORY_POOL_ARRAY(32) \
 	__SET_MEMORY_POOL_ARRAY(28) \
+	__SET_MEMORY_POOL_ARRAY(24) \
 	__SET_MEMORY_POOL_ARRAY(20) \
 	__SET_MEMORY_POOL_ARRAY(16) \
+	__SET_MEMORY_POOL_ARRAY(12) \
 
 // percentage (0-100) above which the memory pool's status shows the pool usage
 #define __MEMORY_POOL_WARNING_THRESHOLD				85
@@ -285,23 +282,29 @@
 // total number of layers (basically the number of worlds)
 #define __TOTAL_LAYERS								32
 
+// Account for VIP's design to draw 8 pixel when BGMAP WORLD's height is less than 8
+#define __HACK_BGMAP_SPRITE_HEIGHT
+
 
 //---------------------------------------------------------------------------------------------------------
 //											TEXTURE MANAGEMENT
 //---------------------------------------------------------------------------------------------------------
 
 // total number of bgmap segments
-#define __TOTAL_NUMBER_OF_BGMAPS_SEGMENTS 			14
+#define __TOTAL_NUMBER_OF_BGMAPS_SEGMENTS 			11
 
-// bgmap segments to use (leave 2 to allocate param table, 1 for printing)
-#define __MAX_NUMBER_OF_BGMAPS_SEGMENTS 			(__TOTAL_NUMBER_OF_BGMAPS_SEGMENTS - 3)
+// number of segments for param tables
+#define __PARAM_TABLE_SEGMENTS						0
+
+// bgmap segments to use (1 for printing)
+#define __MAX_NUMBER_OF_BGMAPS_SEGMENTS 			(__TOTAL_NUMBER_OF_BGMAPS_SEGMENTS - __PARAM_TABLE_SEGMENTS)
 
 // number of bgmap specs in each bgmap segment
-#define __NUM_BGMAPS_PER_SEGMENT 					16
+#define __NUM_BGMAPS_PER_SEGMENT 					10
 
 // printing area
 #define __PRINTING_BGMAP_X_OFFSET					0
-#define __PRINTING_BGMAP_Y_OFFSET					0
+#define __PRINTING_BGMAP_Y_OFFSET					(64 * 8 - __SCREEN_HEIGHT)
 #define __PRINTING_BGMAP_PARALLAX_OFFSET			0
 #define __PRINTABLE_BGMAP_AREA 						1792
 
@@ -315,25 +318,6 @@
 
 // maximum number of rows to write on each call to affine calculation functions
 #define __MAXIMUM_AFFINE_ROWS_PER_CALL				16
-
-
-//---------------------------------------------------------------------------------------------------------
-//												STREAMING
-//---------------------------------------------------------------------------------------------------------
-
-// number of total calls to the streaming method which completes a cycle
-// there are 4 parts for the streaming algorithm:
-// 1) unload entities
-// 2) select the next entity to load
-// 3) create the selected entity
-// 4) initialize the loaded entity
-#define __STREAM_CYCLE_DURATION						24
-
-// padding to determine if an entity must be loaded/unloaded
-// • load pad must always be lower than unload pad!
-// • too close values will put the streaming under heavy usage!
-#define __ENTITY_LOAD_PAD 							256
-#define __ENTITY_UNLOAD_PAD 						312
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -385,12 +369,14 @@
 // default delay between steps in fade effect
 #define __FADE_DELAY								8
 
+// defaul step increment in fade transitions
+#define __CAMERA_EFFECT_FADE_INCREMENT				8
 
 //---------------------------------------------------------------------------------------------------------
 //											COLOR PALETTES
 //---------------------------------------------------------------------------------------------------------
 
-#define __PRINTING_PALETTE							0
+#define __PRINTING_PALETTE							3
 
 // default palette values, actual values are set in stage specs
 #define __BGMAP_PALETTE_0							0b11100100
@@ -418,6 +404,13 @@
 // camera coordinates for the output of exceptions
 #define __EXCEPTION_COLUMN							0
 #define __EXCEPTION_LINE							0
+
+
+//---------------------------------------------------------------------------------------------------------
+//												  HACKS
+//---------------------------------------------------------------------------------------------------------
+
+#undef __MEDNAFEN_HACK
 
 
 #endif
