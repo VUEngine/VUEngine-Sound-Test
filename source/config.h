@@ -367,10 +367,10 @@
 #define __BRIGHTNESS_BRIGHT_RED						128
 
 // default delay between steps in fade effect
-#define __FADE_DELAY								8
+#define __FADE_DELAY								16
 
 // defaul step increment in fade transitions
-#define __CAMERA_EFFECT_FADE_INCREMENT				8
+#define __CAMERA_EFFECT_FADE_INCREMENT				1
 
 //---------------------------------------------------------------------------------------------------------
 //											COLOR PALETTES
@@ -404,13 +404,6 @@
 // camera coordinates for the output of exceptions
 #define __EXCEPTION_COLUMN							0
 #define __EXCEPTION_LINE							0
-
-
-//---------------------------------------------------------------------------------------------------------
-//												  HACKS
-//---------------------------------------------------------------------------------------------------------
-
-#undef __MEDNAFEN_HACK
 
 
 #endif

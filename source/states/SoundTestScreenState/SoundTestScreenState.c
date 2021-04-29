@@ -78,6 +78,7 @@ void SoundTestScreenState::enter(void* owner __attribute__ ((unused)))
 #endif
 
 	// start fade in effect
+	Camera::startEffect(Camera::getInstance(), kHide);
 	Camera::startEffect(Camera::getInstance(),
 		kFadeTo, // effect type
 		0, // initial delay (in ms)
@@ -111,6 +112,7 @@ void SoundTestScreenState::resume(void* owner)
 	if(!Game::isExitingSpecialMode(Game::getInstance()))
 	{
 		// start a fade in effect
+		Camera::startEffect(Camera::getInstance(), kHide);
 		Camera::startEffect(Camera::getInstance(),
 			kFadeTo, // effect type
 			0, // initial delay (in ms)
