@@ -19,7 +19,7 @@
 #define RACER_08_DURATION 250
 
 
-const u16 Racer01RamTrack1[] =
+const uint16 Racer01RamTrack1[] =
 {
   0x000, 0x000 + RACER_01_FREQ, ENDSOUND,
   1, RACER_01_DURATION,
@@ -27,7 +27,7 @@ const u16 Racer01RamTrack1[] =
   1, 1,
 };
 
-const u16 Racer02RamTrack1[] =
+const uint16 Racer02RamTrack1[] =
 {
   0x000, 0x000 + RACER_02_FREQ, ENDSOUND,
   1, RACER_02_DURATION,
@@ -35,7 +35,7 @@ const u16 Racer02RamTrack1[] =
   1, 1,
 };
 
-const u16 Racer03RamTrack1[] =
+const uint16 Racer03RamTrack1[] =
 {
   0x000, 0x000 + RACER_03_FREQ, ENDSOUND,
   1, RACER_03_DURATION,
@@ -43,7 +43,7 @@ const u16 Racer03RamTrack1[] =
   1, 1,
 };
 
-const u16 Racer04RamTrack1[] =
+const uint16 Racer04RamTrack1[] =
 {
   0x000, 0x000 + RACER_04_FREQ, ENDSOUND,
   1, RACER_04_DURATION,
@@ -51,7 +51,7 @@ const u16 Racer04RamTrack1[] =
   1, 1,
 };
 
-const u16 Racer05RamTrack1[] =
+const uint16 Racer05RamTrack1[] =
 {
   0x000, 0x000 + RACER_05_FREQ, ENDSOUND,
   1, RACER_05_DURATION,
@@ -59,7 +59,7 @@ const u16 Racer05RamTrack1[] =
   1, 1,
 };
 
-const u16 Racer06RamTrack1[] =
+const uint16 Racer06RamTrack1[] =
 {
   0x000, 0x000 + RACER_06_FREQ, ENDSOUND,
   1, RACER_06_DURATION,
@@ -67,7 +67,7 @@ const u16 Racer06RamTrack1[] =
   1, 1,
 };
 
-const u16 Racer07RamTrack1[] =
+const uint16 Racer07RamTrack1[] =
 {
   0x000, 0x000 + RACER_07_FREQ, ENDSOUND,
   1, RACER_07_DURATION,
@@ -75,7 +75,7 @@ const u16 Racer07RamTrack1[] =
   1, 1,
 };
 
-const u16 Racer08RamTrack1[] =
+const uint16 Racer08RamTrack1[] =
 {
   0x000, 0x000 + RACER_08_FREQ, ENDSOUND,
   1, RACER_08_DURATION,

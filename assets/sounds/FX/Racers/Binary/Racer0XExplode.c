@@ -19,7 +19,7 @@
 #define RACER_08_DURATION 2000
 
 
-const u16 Racer01ExplodeTrack1[] =
+const uint16 Racer01ExplodeTrack1[] =
 {
   0x000 + RACER_01_FREQ, 0x000 + RACER_01_FREQ, ENDSOUND,
   1, RACER_01_DURATION,
@@ -27,7 +27,7 @@ const u16 Racer01ExplodeTrack1[] =
   1, 1,
 };
 
-const u16 Racer02ExplodeTrack1[] =
+const uint16 Racer02ExplodeTrack1[] =
 {
   0x000 + RACER_02_FREQ, 0x000 + RACER_02_FREQ, ENDSOUND,
   1, RACER_02_DURATION,
@@ -35,7 +35,7 @@ const u16 Racer02ExplodeTrack1[] =
   1, 1,
 };
 
-const u16 Racer03ExplodeTrack1[] =
+const uint16 Racer03ExplodeTrack1[] =
 {
   0x000 + RACER_03_FREQ, 0x000 + RACER_03_FREQ, ENDSOUND,
   1, RACER_03_DURATION,
@@ -43,7 +43,7 @@ const u16 Racer03ExplodeTrack1[] =
   1, 1,
 };
 
-const u16 Racer04ExplodeTrack1[] =
+const uint16 Racer04ExplodeTrack1[] =
 {
   0x000 + RACER_04_FREQ, 0x000 + RACER_04_FREQ, ENDSOUND,
   1, RACER_04_DURATION,
@@ -51,14 +51,14 @@ const u16 Racer04ExplodeTrack1[] =
   1, 1,
 };
 
-const u16 Racer05ExplodeTrack1[] =
+const uint16 Racer05ExplodeTrack1[] =
 {
   0x000 + RACER_05_FREQ, 0x000 + RACER_05_FREQ, ENDSOUND,
   1, RACER_05_DURATION,
   14, 15,
 };
 
-const u16 Racer06ExplodeTrack1[] =
+const uint16 Racer06ExplodeTrack1[] =
 {
   0x000 + RACER_06_FREQ, 0x000 + RACER_06_FREQ, ENDSOUND,
   1, RACER_06_DURATION,
@@ -66,7 +66,7 @@ const u16 Racer06ExplodeTrack1[] =
   1, 1,
 };
 
-const u16 Racer07ExplodeTrack1[] =
+const uint16 Racer07ExplodeTrack1[] =
 {
   0x000 + RACER_07_FREQ, 0x000 + RACER_07_FREQ, ENDSOUND,
   1, RACER_07_DURATION,
@@ -74,7 +74,7 @@ const u16 Racer07ExplodeTrack1[] =
   1, 1,
 };
 
-const u16 Racer08ExplodeTrack1[] =
+const uint16 Racer08ExplodeTrack1[] =
 {
   0x000 + RACER_08_FREQ, 0x000 + RACER_08_FREQ, ENDSOUND,
   1, RACER_08_DURATION,

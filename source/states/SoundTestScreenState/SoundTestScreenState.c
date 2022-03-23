@@ -64,7 +64,7 @@ void SoundTestScreenState::enter(void* owner __attribute__ ((unused)))
 	Base::enter(this, owner);
 
 	// load stage
-	GameState::loadStage(GameState::safeCast(this), (StageSpec*)&SOUND_TEST_SCREEN_STAGE_ST, NULL, true);
+	GameState::loadStage(GameState::safeCast(this), (StageSpec*)&SOUND_TEST_SCREEN_STAGE_ST, NULL, true, true);
 
 	// start clocks to start animations
 	GameState::startClocks(GameState::safeCast(this));
@@ -78,7 +78,6 @@ void SoundTestScreenState::enter(void* owner __attribute__ ((unused)))
 #endif
 
 	// start fade in effect
-	Camera::startEffect(Camera::getInstance(), kHide);
 	Camera::startEffect(Camera::getInstance(),
 		kFadeTo, // effect type
 		0, // initial delay (in ms)
@@ -112,7 +111,6 @@ void SoundTestScreenState::resume(void* owner)
 	if(!Game::isExitingSpecialMode(Game::getInstance()))
 	{
 		// start a fade in effect
-		Camera::startEffect(Camera::getInstance(), kHide);
 		Camera::startEffect(Camera::getInstance(),
 			kFadeTo, // effect type
 			0, // initial delay (in ms)

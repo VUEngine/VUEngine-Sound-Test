@@ -32,7 +32,7 @@
 //												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern const u8 Racer03ExplodeTrack1[];
+extern const uint8 Racer03ExplodeTrack1[];
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ SoundChannelConfigurationROM RACER_03_EXPLODE_SOUND_CHANNEL_1_CONFIGURATION =
 	0x00,
 
 	/// Waveform data pointer
-	triangleWaveForm,
+	TriangleWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNoise,

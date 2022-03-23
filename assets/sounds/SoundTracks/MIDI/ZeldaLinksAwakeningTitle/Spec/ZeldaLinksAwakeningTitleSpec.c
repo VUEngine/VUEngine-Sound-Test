@@ -32,10 +32,10 @@
 //												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern const u8 ZeldaLinksAwakeningTitleTrack1[];
-extern const u8 ZeldaLinksAwakeningTitleTrack2[];
-extern const u8 ZeldaLinksAwakeningTitleTrack3[];
-extern const u8 ZeldaLinksAwakeningTitleTrack4[];
+extern const uint8 ZeldaLinksAwakeningTitleTrack1[];
+extern const uint8 ZeldaLinksAwakeningTitleTrack2[];
+extern const uint8 ZeldaLinksAwakeningTitleTrack3[];
+extern const uint8 ZeldaLinksAwakeningTitleTrack4[];
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_1_CONFIGU
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	SawtoothWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
@@ -111,7 +111,7 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_2_CONFIGU
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	SawtoothWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
@@ -150,7 +150,7 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_3_CONFIGU
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	SawtoothWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
@@ -189,7 +189,7 @@ SoundChannelConfigurationROM ZELDA_LINKS_AWAKENING_TITLE_SOUND_CHANNEL_4_CONFIGU
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	SawtoothWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,

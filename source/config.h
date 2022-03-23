@@ -7,21 +7,22 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//												PLUGINS
+//                                                INCLUDES                                                 
 //---------------------------------------------------------------------------------------------------------
 
 #include "pluginsConfig.h"
+#include "romHeader.h"
 
 
 //---------------------------------------------------------------------------------------------------------
-//											GAME SPECIFIC MACROS
+//                                          GAME SPECIFIC MACROS                                           
 //---------------------------------------------------------------------------------------------------------
 
-#define __SOUND_TEST 1
+#define __TOOLS 0
 
 
 //---------------------------------------------------------------------------------------------------------
-//											COMMUNICATIONS
+//                                             COMMUNICATIONS                                              
 //---------------------------------------------------------------------------------------------------------
 
 // Enable communications at the start of the game
@@ -29,7 +30,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//											DEBUGGING / PROFILING
+//                                          DEBUGGING / PROFILING                                          
 //---------------------------------------------------------------------------------------------------------
 
 // print memory pool's status
@@ -58,11 +59,11 @@
 #undef __SHOW_VIP_OVERTIME_COUNT
 
 // stack headroom
-#define __STACK_HEADROOM								1000
+#define __STACK_HEADROOM								500
 
 
 //---------------------------------------------------------------------------------------------------------
-//											DEBUGGING TOOLS
+//                                             DEBUGGING TOOLS                                             
 //---------------------------------------------------------------------------------------------------------
 
 // If tools already defined, enable all
@@ -115,21 +116,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//											ROM HEADER INFO
-//---------------------------------------------------------------------------------------------------------
-
-// game title (20 chars) 	 ####################
-#define __GAME_TITLE		"VUENGINE SOUND DEMO "
-// maker code (2 chars)		 ##
-#define __MAKER_CODE		"TV"
-// game code (4 chars)		 ####
-#define __GAME_CODE			"VSDE"
-// revision (1.x)			 #
-#define __ROM_VERSION		 0
-
-
-//---------------------------------------------------------------------------------------------------------
-//											OPTICS / PROJECTION
+//                                           OPTICS / PROJECTION                                           
 //---------------------------------------------------------------------------------------------------------
 
 // screen width in pixels
@@ -145,13 +132,13 @@
 #define __DISTANCE_EYE_SCREEN						384
 
 // maximum x view distance (depth) (power of two)
-#define __MAXIMUM_X_VIEW_DISTANCE					2048
+#define __MAXIMUM_X_VIEW_DISTANCE					8192
 
 // maximum y view distance (depth) (power of two)
-#define __MAXIMUM_Y_VIEW_DISTANCE					4096
+#define __MAXIMUM_Y_VIEW_DISTANCE					8192
 
 // distance between eyes
-#define __BASE_FACTOR								21
+#define __BASE_FACTOR								32
 
 // player's eyes' horizontal position
 #define __HORIZONTAL_VIEW_POINT_CENTER				192
@@ -163,19 +150,19 @@
 #define __PARALLAX_CORRECTION_FACTOR				4
 
 // affects the strength of the scaling
-#define __SCALING_MODIFIER_FACTOR					0.2f
+#define __SCALING_MODIFIER_FACTOR					0.017f
 
 // minimum number of pixels that the camera can move
 #define __CAMERA_MINIMUM_DISPLACEMENT_PIXELS_POWER	1
 
 
 //---------------------------------------------------------------------------------------------------------
-//											FRAME RATE CONTROL
+//                                           FRAME RATE CONTROL                                            
 //---------------------------------------------------------------------------------------------------------
 
 // when defined, the engine skips to the next game frame when the VIP's GAMESTART interrupt is fired
 // beforethe current game frame is done
-#undef __FORCE_VIP_SYNC
+#define __FORCE_VIP_SYNC
 
 // timer resolution
 #define __TIMER_RESOLUTION							10
@@ -198,7 +185,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//												ANIMATION
+//                                                ANIMATION                                                
 //---------------------------------------------------------------------------------------------------------
 
 // maximum length of an animation function's name
@@ -212,7 +199,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//												MEMORY POOL
+//                                               MEMORY POOL                                               
 //---------------------------------------------------------------------------------------------------------
 
 // reset to 0 each byte of each free block on resetting game
@@ -220,46 +207,40 @@
 #undef __MEMORY_POOL_CLEAN_UP
 
 #undef __MEMORY_POOLS
-#define __MEMORY_POOLS								13
+#define __MEMORY_POOLS								10
 
 #undef __MEMORY_POOL_ARRAYS
 #define __MEMORY_POOL_ARRAYS \
-	__BLOCK_DEFINITION(320, 9) \
-	__BLOCK_DEFINITION(180, 5) \
-	__BLOCK_DEFINITION(152, 16) \
-	__BLOCK_DEFINITION(116, 35) \
-	__BLOCK_DEFINITION(96, 60) \
-	__BLOCK_DEFINITION(60, 65) \
-	__BLOCK_DEFINITION(36, 65) \
-	__BLOCK_DEFINITION(32, 75) \
-	__BLOCK_DEFINITION(28, 140) \
-	__BLOCK_DEFINITION(24, 830) \
-	__BLOCK_DEFINITION(20, 280) \
-	__BLOCK_DEFINITION(16, 400) \
-	__BLOCK_DEFINITION(12, 60) \
+	__BLOCK_DEFINITION(164, 5) \
+	__BLOCK_DEFINITION(152, 12) \
+	__BLOCK_DEFINITION(128, 15) \
+	__BLOCK_DEFINITION(120, 70) \
+	__BLOCK_DEFINITION(92, 40) \
+	__BLOCK_DEFINITION(80, 100) \
+	__BLOCK_DEFINITION(48, 100) \
+	__BLOCK_DEFINITION(32, 250) \
+	__BLOCK_DEFINITION(24, 600) \
+	__BLOCK_DEFINITION(20, 400) \
 
 #undef __SET_MEMORY_POOL_ARRAYS
 #define __SET_MEMORY_POOL_ARRAYS \
-	__SET_MEMORY_POOL_ARRAY(320) \
-	__SET_MEMORY_POOL_ARRAY(180) \
+	__SET_MEMORY_POOL_ARRAY(164) \
 	__SET_MEMORY_POOL_ARRAY(152) \
-	__SET_MEMORY_POOL_ARRAY(116) \
-	__SET_MEMORY_POOL_ARRAY(96) \
-	__SET_MEMORY_POOL_ARRAY(60) \
-	__SET_MEMORY_POOL_ARRAY(36) \
+	__SET_MEMORY_POOL_ARRAY(128) \
+	__SET_MEMORY_POOL_ARRAY(120) \
+	__SET_MEMORY_POOL_ARRAY(92) \
+	__SET_MEMORY_POOL_ARRAY(80) \
+	__SET_MEMORY_POOL_ARRAY(48) \
 	__SET_MEMORY_POOL_ARRAY(32) \
-	__SET_MEMORY_POOL_ARRAY(28) \
 	__SET_MEMORY_POOL_ARRAY(24) \
 	__SET_MEMORY_POOL_ARRAY(20) \
-	__SET_MEMORY_POOL_ARRAY(16) \
-	__SET_MEMORY_POOL_ARRAY(12) \
 
 // percentage (0-100) above which the memory pool's status shows the pool usage
 #define __MEMORY_POOL_WARNING_THRESHOLD				85
 
 
 //---------------------------------------------------------------------------------------------------------
-//												SRAM
+//                                                  SRAM                                                   
 //---------------------------------------------------------------------------------------------------------
 
 // amount of available sram space, in bytes
@@ -268,7 +249,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//											CHAR MANAGEMENT
+//                                             CHAR MANAGEMENT                                             
 //---------------------------------------------------------------------------------------------------------
 
 // total number of available chars in char memory
@@ -276,7 +257,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//											SPRITE MANAGEMENT
+//                                            SPRITE MANAGEMENT                                            
 //---------------------------------------------------------------------------------------------------------
 
 // total number of layers (basically the number of worlds)
@@ -287,20 +268,20 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//											TEXTURE MANAGEMENT
+//                                           TEXTURE MANAGEMENT                                            
 //---------------------------------------------------------------------------------------------------------
 
 // total number of bgmap segments
 #define __TOTAL_NUMBER_OF_BGMAPS_SEGMENTS 			11
 
 // number of segments for param tables
-#define __PARAM_TABLE_SEGMENTS						0
+#define __PARAM_TABLE_SEGMENTS						1
 
 // bgmap segments to use (1 for printing)
 #define __MAX_NUMBER_OF_BGMAPS_SEGMENTS 			(__TOTAL_NUMBER_OF_BGMAPS_SEGMENTS - __PARAM_TABLE_SEGMENTS)
 
 // number of bgmap specs in each bgmap segment
-#define __NUM_BGMAPS_PER_SEGMENT 					10
+#define __NUM_BGMAPS_PER_SEGMENT 					16
 
 // printing area
 #define __PRINTING_BGMAP_X_OFFSET					0
@@ -310,7 +291,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//												PARAM TABLE
+//                                               PARAM TABLE                                               
 //---------------------------------------------------------------------------------------------------------
 
 // maximum possible scale: affects param table allocation space
@@ -321,7 +302,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//												PHYSICS
+//                                                 PHYSICS                                                 
 //---------------------------------------------------------------------------------------------------------
 
 #define __GRAVITY									19.6f
@@ -343,11 +324,11 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//												SOUND
+//                                                  SOUND                                                  
 //---------------------------------------------------------------------------------------------------------
 
-#define __LEFT_EAR_CENTER							96
-#define __RIGHT_EAR_CENTER							288
+#define __LEFT_EAR_CENTER							144
+#define __RIGHT_EAR_CENTER							240
 
 // affects the amount of attenuation caused by the distance between the x coordinate and each ear's
 // position defined by __LEFT_EAR_CENTER and __RIGHT_EAR_CENTER
@@ -356,7 +337,7 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//											BRIGHTNESS
+//                                               BRIGHTNESS                                                
 //---------------------------------------------------------------------------------------------------------
 
 // default brightness settings, actual values are set in stage specs
@@ -367,16 +348,16 @@
 #define __BRIGHTNESS_BRIGHT_RED						128
 
 // default delay between steps in fade effect
-#define __FADE_DELAY								16
+#define __FADE_DELAY								48
 
 // defaul step increment in fade transitions
-#define __CAMERA_EFFECT_FADE_INCREMENT				1
+#define __CAMERA_EFFECT_FADE_INCREMENT				4
 
 //---------------------------------------------------------------------------------------------------------
-//											COLOR PALETTES
+//                                             COLOR PALETTES                                              
 //---------------------------------------------------------------------------------------------------------
 
-#define __PRINTING_PALETTE							3
+#define __PRINTING_PALETTE							0
 
 // default palette values, actual values are set in stage specs
 #define __BGMAP_PALETTE_0							0b11100100
@@ -391,14 +372,14 @@
 
 
 //---------------------------------------------------------------------------------------------------------
-//										RANDOM NUMBER GENERATION
+//                                        RANDOM NUMBER GENERATION                                         
 //---------------------------------------------------------------------------------------------------------
 
 #undef __ADD_USER_INPUT_AND_TIME_TO_RANDOM_SEED
 
 
 //---------------------------------------------------------------------------------------------------------
-//												EXCEPTIONS
+//                                               EXCEPTIONS                                                
 //---------------------------------------------------------------------------------------------------------
 
 // camera coordinates for the output of exceptions

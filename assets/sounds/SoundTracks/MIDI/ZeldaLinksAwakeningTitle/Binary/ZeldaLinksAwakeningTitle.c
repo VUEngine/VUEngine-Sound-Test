@@ -5,7 +5,7 @@
 // Target timer resolution in us = 4240
 
 // Instrument: 0 patchchange ch: 1 cello;
-const u16 ZeldaLinksAwakeningTitleTrack1[] =
+const uint16 ZeldaLinksAwakeningTitleTrack1[] =
 {
   PAU, D_5, PAU, A_4, PAU, D_5, PAU, D_5, PAU, E_5, PAU, FS5, PAU, G_5, PAU, A_5, PAU, A_5, PAU, A_5, PAU, AS5, PAU, C_6, PAU, D_6, PAU, D_6, PAU, D_6, PAU, C_6, PAU, AS5, PAU, C_6, PAU, AS5, PAU, A_5, PAU, A_5, PAU, G_5, PAU, A_5, PAU, AS5, PAU, A_5, PAU, G_5, PAU, F_5, PAU, G_5, PAU, A_5, PAU, G_5, PAU, F_5, PAU, E_5, PAU, FS5, PAU, GS5, PAU, B_5, PAU, A_5, PAU, D_5, PAU, D_5, PAU, D_5, PAU, D_5, PAU, D_5, PAU, D_5, PAU, CS5, PAU, CS5, PAU, CS5, PAU, CS5, PAU, CS5, PAU, CS5, PAU, D_5, PAU, A_4, PAU, D_5, PAU, D_5, PAU, E_5, PAU, FS5, PAU, G_5, PAU, A_5, PAU, A_5, PAU, A_5, PAU, AS5, PAU, C_6, PAU, D_6, PAU, D_6, PAU, D_6, PAU, C_6, PAU, AS5, PAU, C_6, PAU, AS5, PAU, A_5, PAU, A_5, PAU, G_5, PAU, A_5, PAU, AS5, PAU, A_5, PAU, G_5, PAU, F_5, PAU, G_5, PAU, A_5, PAU, G_5, PAU, F_5, PAU, E_5, PAU, FS5, PAU, GS5, PAU, B_5, PAU, A_5, PAU, D_5, PAU, D_5, PAU, D_5, PAU, D_5, PAU, D_5, PAU, D_5, PAU, CS5, PAU, CS5, PAU, CS5, PAU, CS5, PAU, CS5, PAU, CS5, PAU, D_4, ENDSOUND,
   1, 64, 32, 128, 40, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 128, 112, 32, 16, 32, 16, 16, 8, 16, 8, 128, 112, 32, 16, 32, 16, 16, 8, 16, 8, 64, 8, 16, 8, 128, 64, 64, 32, 64, 8, 16, 8, 128, 64, 32, 16, 32, 16, 64, 8, 16, 8, 128, 64, 32, 16, 32, 16, 64, 8, 16, 8, 128, 64, 64, 32, 32, 16, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 208, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 160, 64, 32, 128, 40, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 128, 112, 32, 16, 32, 16, 16, 8, 16, 8, 128, 112, 32, 16, 32, 16, 16, 8, 16, 8, 64, 8, 16, 8, 128, 64, 64, 32, 64, 8, 16, 8, 128, 64, 32, 16, 32, 16, 64, 8, 16, 8, 128, 64, 32, 16, 32, 16, 64, 8, 16, 8, 128, 64, 64, 32, 32, 16, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 208, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 160, 257,
@@ -13,7 +13,7 @@ const u16 ZeldaLinksAwakeningTitleTrack1[] =
 };
 
 // Instrument: 0 patchchange ch: 2 contrabass;
-const u16 ZeldaLinksAwakeningTitleTrack2[] =
+const uint16 ZeldaLinksAwakeningTitleTrack2[] =
 {
   PAU, D_3, PAU, A_3, PAU, A_3, PAU, D_3, PAU, A_3, PAU, A_3, PAU, C_3, PAU, G_3, PAU, G_3, PAU, C_3, PAU, G_3, PAU, G_3, PAU, AS2, PAU, F_3, PAU, F_3, PAU, AS2, PAU, F_3, PAU, F_3, PAU, F_3, PAU, F_4, PAU, F_4, PAU, F_3, PAU, F_4, PAU, F_4, PAU, DS3, PAU, DS4, PAU, DS4, PAU, DS3, PAU, DS4, PAU, DS4, PAU, D_3, PAU, D_4, PAU, D_4, PAU, D_3, PAU, D_4, PAU, D_4, PAU, E_3, PAU, E_4, PAU, E_4, PAU, E_3, PAU, E_4, PAU, E_4, PAU, E_3, PAU, E_3, PAU, E_3, PAU, E_3, PAU, E_3, PAU, A_3, PAU, A_2, PAU, A_2, PAU, A_2, PAU, B_2, PAU, C_3, PAU, CS3, PAU, D_3, PAU, A_3, PAU, A_3, PAU, D_3, PAU, A_3, PAU, A_3, PAU, C_3, PAU, G_3, PAU, G_3, PAU, C_3, PAU, G_3, PAU, G_3, PAU, AS2, PAU, F_3, PAU, F_3, PAU, AS2, PAU, F_3, PAU, F_3, PAU, F_3, PAU, F_4, PAU, F_4, PAU, F_3, PAU, F_4, PAU, F_4, PAU, DS3, PAU, DS4, PAU, DS4, PAU, DS3, PAU, DS4, PAU, DS4, PAU, D_3, PAU, D_4, PAU, D_4, PAU, D_3, PAU, D_4, PAU, D_4, PAU, E_3, PAU, E_4, PAU, E_4, PAU, E_3, PAU, E_4, PAU, E_4, PAU, E_3, PAU, E_3, PAU, E_3, PAU, E_3, PAU, E_3, PAU, A_3, PAU, A_2, PAU, A_2, PAU, A_2, PAU, B_2, PAU, C_3, PAU, CS3, PAU, D_3, ENDSOUND,
   1, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 256, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 208, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 16, 32, 16, 32, 64, 32, 256, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 208, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 257,
@@ -21,7 +21,7 @@ const u16 ZeldaLinksAwakeningTitleTrack2[] =
 };
 
 // Instrument: 0 patchchange ch: 3 piccolo;
-const u16 ZeldaLinksAwakeningTitleTrack3[] =
+const uint16 ZeldaLinksAwakeningTitleTrack3[] =
 {
   PAU, D_6, PAU, D_6, PAU, E_6, PAU, FS6, PAU, G_6, PAU, A_6, PAU, F_6, PAU, AS6, PAU, C_7, PAU, D_7, PAU, F_7, PAU, F_6, PAU, G_6, PAU, A_6, PAU, F_6, PAU, C_6, PAU, G_6, PAU, A_6, PAU, AS6, PAU, G_6, PAU, A_6, PAU, AS6, PAU, F_6, PAU, G_6, PAU, A_6, PAU, F_6, PAU, G_6, PAU, A_6, PAU, E_6, PAU, FS6, PAU, GS6, PAU, GS6, PAU, A_6, PAU, B_6, PAU, CS7, PAU, D_7, PAU, E_7, PAU, CS7, PAU, D_6, PAU, D_6, PAU, E_6, PAU, FS6, PAU, G_6, PAU, A_6, PAU, F_6, PAU, AS6, PAU, C_7, PAU, D_7, PAU, F_7, PAU, F_6, PAU, G_6, PAU, A_6, PAU, F_6, PAU, C_6, PAU, G_6, PAU, A_6, PAU, AS6, PAU, G_6, PAU, A_6, PAU, AS6, PAU, F_6, PAU, G_6, PAU, A_6, PAU, F_6, PAU, G_6, PAU, A_6, PAU, E_6, PAU, FS6, PAU, GS6, PAU, GS6, PAU, A_6, PAU, B_6, PAU, CS7, PAU, D_7, PAU, E_7, PAU, CS7, PAU, ENDSOUND,
   433, 32, 16, 16, 8, 16, 8, 16, 8, 16, 8, 128, 160, 16, 8, 16, 8, 16, 8, 16, 8, 128, 208, 16, 8, 16, 8, 32, 16, 32, 16, 64, 176, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 208, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 208, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 32, 1168, 32, 16, 16, 8, 16, 8, 16, 8, 16, 8, 128, 160, 16, 8, 16, 8, 16, 8, 16, 8, 128, 208, 16, 8, 16, 8, 32, 16, 32, 16, 64, 176, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 208, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 32, 208, 16, 8, 16, 8, 32, 16, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 16, 8, 32, 993,
@@ -29,7 +29,7 @@ const u16 ZeldaLinksAwakeningTitleTrack3[] =
 };
 
 // Instrument: 0 patchchange ch: 10 string ensemble 1;
-const u16 ZeldaLinksAwakeningTitleTrack4[] =
+const uint16 ZeldaLinksAwakeningTitleTrack4[] =
 {
   PAU, CS4, PAU, ENDSOUND,
   3458, 86, 3626,

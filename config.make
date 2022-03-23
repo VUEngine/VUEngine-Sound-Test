@@ -3,15 +3,17 @@
 ###########################################################################################################
 
 # VUEngine based plugins that the project uses
-PLUGINS 						= vuengine/entities/LowPowerEntity \
-								  vuengine/states/SplashScreens
+PLUGINS 						= vuengine//entities/LowPowerEntity \
+								  vuengine//states/splash/AdjustmentScreenVUEngine \
+								  vuengine//states/splash/PrecautionScreen \
+								  vuengine//states/splash/SplashScreen
 
 # Compiler's output
 COMPILER_OUTPUT					= c
 
 # Optimization level
 # Do not use O3 for multiplayer games, it causes unexpected out of sync behaviour when framerate drops
-OPTIMIZATION					= O2
+OPTIMIZATION					= O3
 
 # Frame pointer's usage
 # 0: Omit.

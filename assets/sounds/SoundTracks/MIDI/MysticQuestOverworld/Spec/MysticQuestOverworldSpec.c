@@ -32,11 +32,11 @@
 //												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern const u8 MysticQuestOverworldTrack1[];
-extern const u8 MysticQuestOverworldTrack2[];
-extern const u8 MysticQuestOverworldTrack3[];
-extern const u8 MysticQuestOverworldTrack4[];
-extern const u8 MysticQuestOverworldTrack5[];
+extern const uint8 MysticQuestOverworldTrack1[];
+extern const uint8 MysticQuestOverworldTrack2[];
+extern const uint8 MysticQuestOverworldTrack3[];
+extern const uint8 MysticQuestOverworldTrack4[];
+extern const uint8 MysticQuestOverworldTrack5[];
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_1_CONFIGURATIO
 	0x00,
 
 	/// Waveform data pointer
-	trumpetWaveForm,
+	TrumpetWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
@@ -112,7 +112,7 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_2_CONFIGURATIO
 	0x00,
 
 	/// Waveform data pointer
-	violinWaveForm,
+	ViolinWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
@@ -151,7 +151,7 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_3_CONFIGURATIO
 	0x00,
 
 	/// Waveform data pointer
-	violinWaveForm,
+	ViolinWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
@@ -190,7 +190,7 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_4_CONFIGURATIO
 	0x00,
 
 	/// Waveform data pointer
-	violinWaveForm,
+	ViolinWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
@@ -229,7 +229,7 @@ SoundChannelConfigurationROM MYSTIC_QUEST_OVERWORLD_SOUND_CHANNEL_5_CONFIGURATIO
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	SawtoothWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,

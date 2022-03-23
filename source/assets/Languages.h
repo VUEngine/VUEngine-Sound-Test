@@ -5,5 +5,15 @@
 #ifndef LANGUAGES_H_
 #define LANGUAGES_H_
 
+//---------------------------------------------------------------------------------------------------------
+//                                               DEFINITIONS                                               
+//---------------------------------------------------------------------------------------------------------
+
+enum LanguageStrings
+{
+	kStringLanguageSelectTitle,
+	kStringPrecautionScreenBody,
+};
+
 
 #endif

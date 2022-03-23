@@ -1,0 +1,6 @@
+[
+    "vuengine//entities/LowPowerEntity",
+    "vuengine//states/splash/AdjustmentScreenVUEngine",
+    "vuengine//states/splash/PrecautionScreen",
+    "vuengine//states/splash/SplashScreen"
+]

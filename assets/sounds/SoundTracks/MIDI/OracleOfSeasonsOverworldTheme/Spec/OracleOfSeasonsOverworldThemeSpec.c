@@ -32,9 +32,9 @@
 //												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern const u8 OracleOfSeasonsOverworldThemeTrack1[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack2[];
-extern const u8 OracleOfSeasonsOverworldThemeTrack3[];
+extern const uint8 OracleOfSeasonsOverworldThemeTrack1[];
+extern const uint8 OracleOfSeasonsOverworldThemeTrack2[];
+extern const uint8 OracleOfSeasonsOverworldThemeTrack3[];
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -71,7 +71,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_1_C
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	SawtoothWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
@@ -110,7 +110,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_2_C
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	SawtoothWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,
@@ -149,7 +149,7 @@ SoundChannelConfigurationROM ORACLE_OF_SEASONS_OVERWORLD_THEME_SOUND_CHANNEL_3_C
 	0x00,
 
 	/// Waveform data pointer
-	sawtoothWaveForm,
+	SawtoothWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNormal,

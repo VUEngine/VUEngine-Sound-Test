@@ -34,10 +34,10 @@
 
 #define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK
 
-extern const u8 SuperMarioBros3Track1Track1[];
-extern const u8 SuperMarioBros3Track1Track2[];
-extern const u8 SuperMarioBros3Track1Track3[];
-extern const u8 SuperMarioBros3Track1Track4[];
+extern const uint8 SuperMarioBros3Track1Track1[];
+extern const uint8 SuperMarioBros3Track1Track2[];
+extern const uint8 SuperMarioBros3Track1Track3[];
+extern const uint8 SuperMarioBros3Track1Track4[];
 
 
 #define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_1_SxINT			0x00
@@ -60,10 +60,10 @@ extern const u8 SuperMarioBros3Track1Track4[];
 #define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_3_SxEV1			0x00
 #define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_4_SxEV1			0x00
 
-#define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_1_WAVEFORM		squareWaveForm
-#define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_2_WAVEFORM		squareWaveForm
-#define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_3_WAVEFORM		squareWaveForm
-#define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_4_WAVEFORM		pianoWaveForm
+#define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_1_WAVEFORM		SquareWaveForm
+#define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_2_WAVEFORM		SquareWaveForm
+#define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_3_WAVEFORM		SquareWaveForm
+#define SUPER_MARIO_BROS_3_TRACK_1_SOUND_TRACK_4_WAVEFORM		PianoWaveForm
 
 
 

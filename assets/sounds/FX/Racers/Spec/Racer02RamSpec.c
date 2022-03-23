@@ -32,7 +32,7 @@
 //												DECLARATIONS
 //---------------------------------------------------------------------------------------------------------
 
-extern const u8 Racer02RamTrack1[];
+extern const uint8 Racer02RamTrack1[];
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ SoundChannelConfigurationROM RACER_02_RAM_SOUND_CHANNEL_1_CONFIGURATION =
 	0x00,
 
 	/// Waveform data pointer
-	triangleWaveForm,
+	TriangleWaveForm,
 
 	/// kChannelNormal, kChannelModulation, kChannelNoise
 	kChannelNoise,
